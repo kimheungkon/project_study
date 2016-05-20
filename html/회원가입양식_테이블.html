@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <!--
+ 헤더스 사용방법
+https://www.w3.org/TR/WCAG20-TECHS/H43.html
+-->
+
+
+<form class="" action="index.html" method="post">
+
+    <table border="1" width="100%" summary="세부설명">
+        <caption>회원가입</caption>
+
+        <thead>
+            <tr>
+                <th colspan="7" scope="colgroup" id="f1">필수입력</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>아이디</th>
+                <td colspan="6" scope="colgroup" id="f1">
+                <input placeholder="아이디"></td>
+            </tr>
+            <tr>
+                <th><label for="userPw">비밀번호</label></th>
+                <td colspan="6" scope="colgroup" id="f1">
+                    <input type="password" id="userPw" name=""/></td>
+            </tr>
+            <tr>
+                <th><label for="bisexuality">성별</label></th>
+                <td colspan="6" scope="colgroup" id="f1">
+                    <input type="radio" name="sex" id="man" /><label for="man">남자</label>
+                    <input type="radio" name="sex" id="woman" /><label for="woman">여자</label>
+                    <input type="radio" name="sex" id="bisexuality" /><label for="bisexuality">양성</label>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="se">도시</label></th>
+                <td><input type="radio" name="shl">서울<label for="se"></td>
+                <td><input type="radio" name="shl">경기</td>
+                <td><input type="radio" name="shl">광주</td>
+                <td><input type="radio" name="shl">대구</td>
+                <td><input type="radio" name="shl">부산</td>
+                <td><input type="radio" name="shl">제주</td>
+            </tr>
+            <tr>
+                <th><label for="a1">결혼여부</label></th>
+                <td colspan="6" scope="colgroup" id="f1">
+                    <input type="checkbox" id="a1" name="a1"/><label for="a1">미혼</label>
+                    <input type="checkbox" id="a2" name="a2"/><label for="a2">기혼</label>
+                    <input type="checkbox" id="a3" name="a3"/><label for="a3">앞으로예정</label>
+                    <input type="checkbox" id="a4" name="a4"/><label for="a4">못갈것같은</label>
+                    <input type="checkbox" id="a5" name="a5"/><label for="a5">중혼</label>
+                </td>
+            </tr>
+            <tr>
+                <th>사진업로드</th>
+                <td colspan="6" scope="colgroup" id="f1">
+                    <input type="file" id="photoUpload"/>
+            </tr>
+            <tr>
+                <th colspan="7" scope="colgroup" id="f1">
+                    <input type="button" value="취소">
+                    <input type="submit" value="전송">
+                    <input type="reset" value="초기화">
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

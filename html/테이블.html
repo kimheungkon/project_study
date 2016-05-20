@@ -5,42 +5,53 @@
     <title>Document</title>
 </head>
 <body>
+ <!--
+ 헤더스 사용방법
+https://www.w3.org/TR/WCAG20-TECHS/H43.html
+-->
+    <table border="1" width="100%" summary="세부설명">
+        <caption>표의제목</caption>
+        <colgroup>
+            <col width="100"/>
+            <col />
+            <col width="100"/>
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="4" scope="colgroup" id="f1">text</th>
+            </tr>
+            <tr>
+                <th scope="col" id="f22">text</th>
+                <th scope="col" id="f23">text</th>
+                <th scope="col" id="f24">text</th>
+                <th scope="col" id="f25">text</th>
+            </tr>
+        </thead>
 
-    <table border="1" width="100%">
-    <thead>
-        <tr>
-            <th>text</th>
-            <th>text</th>
-            <th>text</th>
-            <th>text</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <td>foot</td>
-            <td>foot</td>
-            <td>foot</td>
-            <td>foot</td>
-        </tr>
-    </tfoot>
-    <tbody>
-        <tr>
-            <td>text</td>
-            <td>text</td>
-            <td>text</td>
-            <td>text</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>text</td>
-            <td>text</td>
-            <td>text</td>
-            <td>text</td>
-        </tr>
-    </tbody>
-
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="3" id="c44">text</th>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td rowspan="2" id="g11">text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td headers="f1 f24 c44 g11">text</td>
+                <td>text</td>
+            </tr>
+        </tbody>
     </table>
+
+
+
+
+
 
 
 

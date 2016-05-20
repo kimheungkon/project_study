@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h1>회원가입</h1>
+
+<form>
+<fieldset>
+    <legend>필수입력</legend>
+    <ul>
+        <li>
+            <label for="userId">
+                <input type="text" id="userId" name="" placeholder="아이디"/>
+            </label>
+    </li>
+    <li>
+        <label for="userPw">비밀번호</label>
+        <input type="password" id="userPw" name=""/>
+    </li>
+    <li>
+        <label for="bisexuality">성별</label>
+        <input type="radio" name="sex" id="man" /><label for="man">남자</label>
+        <input type="radio" name="sex" id="woman" /><label for="woman">여자</label>
+        <input type="radio" name="sex" id="bisexuality" /><label for="bisexuality">양성</label>
+    </li>
+    <li>
+        <label for="a1">결혼여부</label>
+        <input type="checkbox" id="a1" name="a1"/><label for="a1">미혼</label>
+        <input type="checkbox" id="a2" name="a2"/><label for="a2">기혼</label>
+        <input type="checkbox" id="a3" name="a3"/><label for="a3">앞으로예정</label>
+        <input type="checkbox" id="a4" name="a4"/><label for="a4">못갈것같은</label>
+        <input type="checkbox" id="a5" name="a5"/><label for="a5">중혼</label>
+    </li>
+    <li>
+        <label for="photoupload">사진업로드</label>
+        <input type="file" id="photoUpload"/>
+    </li>
+    </ul>
+
+    <input type="button" value="취소">
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+
+</fieldset>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        
+        ul,ol{
+            list-style:none;
+        }
+        
+        .wrapper{
+            width:900px;
+            height:540px;
+            outline:1px #f00 solid;
+            margin:20px auto 0;
+        }
+        .header{
+            padding:20px 0 33px;
+            border-bottom:2px #000 solid;
+            height: 54px;
+            margin:0 30px 15px;
+        }
+        .header .h-left{border:1px #F00 solid; float:left;}
+        .header .h-right{height:80px; border:1px #F00 solid; float:right; margin-bottom:10px;}
+        .header .h-content{width:350px; height:30px; border:1px #F00 solid; clear:left;}
+        
+        .content{
+            outline:1px #f00 solid;
+            margin:0 30px;
+            height:385px;
+        }
+        .content .lc{
+            outline:1px #f00 solid;
+            width:503px;
+            height:100%;
+            float:left;
+        }
+        .lc .top_article ul{border:1px #00F solid;}
+        .lc .top_article ul li { margin-left:150px;}
+        .lc .top_article ul li.firstli {margin-left:0; margin-bottom:10px;}
+        .lc .top_article ul li.firstli strong{display:block;}
+        .lc .top_article ul li.firstli span{font-size:12px; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+        .lc .top_article ul li.firstli img{float:left; margin-right:10px;}
+                
+        
+        .content .lc .top_article{
+            outline:1px #f00 solid;
+            height:110px;
+            margin-bottom:10px;
+        }   
+        .content .lc .bottom_article{
+            outline:1px #f00 solid;
+            height:265px;
+        } 
+        .content .rc{
+            outline:1px #f00 solid;
+            margin-left:513px;
+            height:100%;
+        }        
+        .rc_top{
+            width:3;
+            height:188px;
+            outline:1px #F00 solid;
+        }
+        .rc_top_l{
+            outline:1px #f00 solid;
+            width:48%;
+            height:100%;
+            float:left;            
+        }
+        .rc_top_r{
+            outline:1px #f00 solid;
+            margin-left:52%;
+            height:100%
+        }        
+        .rc_bottom{
+            height:133px;
+            outline:1px #F00 solid;
+            margin-bottom:27px;
+        }        
+        .rc_promotion{
+            height:37px;
+            outline:1px #F00 solid;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="h-left"><img src="http://static.naver.net/newsstand/up/2013/0813/nsd114420405.gif" alt=""></div>
+            <div class="h-right"><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01446516899395.jpg" alt=""></div>
+            <div class="h-content">
+                <button>구독하기</button>
+                <button>이용자한마디</button>
+                <button>소셜보내기</button>
+                <span>2016-5-26</span>
+            </div>       
+        </div>
+        <div class="content">
+            <div class="lc">
+                <div class="top_article">
+                    <ul>
+                        <li class="firstli">
+                            <img src="http://static.naver.net/newsstand/2016/0526/inews/150458/001.jpg" alt="누구인지는 모르지만 대머리 아저씨">
+                            <strong>삼성 "퀀텀닷, 차세대 TV 화질 역사쓸 것"</strong>
+                            <span>장혁 삼성전자 종합기술원 부사장 '국제 퀀텀닷 컨퍼런스' 기조연설 나서</span>
+                         </li>   
+                        <li><a href="#">김현석 삼성전자 "퀀텀닷 TV, OLED 앞선다"</a></li>
+                        <li><a href="#">삼성전자, 멕시코서 '퀀텀닷 기술 세미나'..</a></li>
+                    </ul> 
+                </div>
+                <div class="bottom_article"></div>
+            </div>
+            <div class="rc">
+                <div class="rc_top">
+                    <div class="rc_top_l"></div>
+                    <div class="rc_top_r"></div>
+                </div>
+                <div class="rc_bottom"></div>
+                <div class="rc_promotion"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

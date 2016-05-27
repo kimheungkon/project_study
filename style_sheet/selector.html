@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+/*http://www.w3schools.com/cssref/css_selectors.asp*/
+
+       *{margin:0; padding:0;}
+           /*[href$=".pdf"][*/
+       
+        /*[class^="color-"]{border:1px #F00 solid;}*/
+        /*[class$="-model"]{border:1px #F00 solid; margin-left:100px;}*/
+        /*[class*="text"]{border-width:3px;}*/
+        
+        /*#menu>ul>li:first-child+li{border:1px #F00 solid;}    */
+        /*#menu>ul>li:first-child+li+li{border:1px #00F solid;}*/
+        /*#menu>ul>li:first-child+li+li+li>a{margin:10px;}*/
+        ul{list-style:none;}
+        #menu{margin:100px;}
+        #menu ul ul{display:none;}
+        #menu>ul>li{border-left:1px #F00 solid; padding:10px 0; float:left; margin:0 20px;}        
+        #menu>ul>li:first-child{border-left:0;}
+        
+        a:link{color:#F00;}
+        a:hover{color:#00F;}
+        a:visited{color:#FF0;}
+        a:active{color:#F0F;}
+        
+        
+        
+        
+        
+            
+        /*
+        p
+        .
+        #
+        +
+        []
+        >
+        first-child
+        
+        */
+        /*.box{border:1px #F00 solid; width: 100px;height: 100px;}*/
+        /*.a::before{float:left;content:""; display:block;clear:both;}*/
+        /*.b{width:200px; margin-top:10px;}*/
+        
+        
+        
+        
+        .b{margin:100px;}
+        .b::before{display:block; content:""; width:100px; height:100px; border:1px #F00 solid; transition:2s;}
+        .b::after{display:block; content:""; width:100px; height:100px; border:1px #F00 solid; transition:3s}
+        .b:hover::before{margin-top:20px; transform:rotateX(180deg); margin-left:100px;}
+        .b:hover::after{margin-top:20px;transform:rotateY(-180deg); margin-right:100px;}
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div class="box b">sdfsdfds</div>
+        
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="sdfsf">text</a>
+                <ul>
+                    <li><a href="#" title="을" class="color-text-model">하위</a></li>
+                    <li><a href="#">하위</a></li>
+                    <li><a href="#dsdf">하위</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sdfsdf">text</a></li>
+            <li><a href="sdfsdf">text</a></li>
+            <li><a href="ssdfsdf" title="하위">text</a></li>
+            <li><a href="sdf">text</a></li>
+            <li><a href="">text</a></li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+</html>

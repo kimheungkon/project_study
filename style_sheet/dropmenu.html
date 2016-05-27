@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;list-style:none;}
+        .menu{border:1px #F00 solid; width:200px;}
+        .menu>ul{margin:20px;}
+        .menu>ul>li:hover>ul{display:block;}
+        .menu ul ul{border:1px #F00 solid; text-indent:20px; display:none; transition:1s;}        
+    </style>
+</head>
+<body>
+  <!--table>(colgroup>col*4)+(thead>tr>th*4)+(tbody>tr*5>td{text}*4)+(tfoot>tr>td{text}*4)-->
+  <!--div.menu>ul>li*3>a{text}+ul>li*3>a{text}-->
+  
+  <div class="menu">
+  
+    <ul>
+        <li>
+            <a href="">text</a>
+            <ul>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">text</a>
+            <ul>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">text</a>
+            <ul>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+                <li><a href="">text</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    </div>

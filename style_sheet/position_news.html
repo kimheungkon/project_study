@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position News</title>
+    <style type="text/css">
+
+
+/*reset*/
+ul,ol,body,h1,h2{margin:0; padding:0}
+ul,ol{list-style: none;}
+a{text-decoration: none; color:#666}
+
+/*bg-color*/
+.mainBgColor {background-color:#333333 !important;}
+.subBgColor {background-color:#b42568 !important;}
+.subBgColor2 {background-color:#235475 !important;}
+
+/*option*/
+.hide{width:0; height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px}
+
+.grid_list {overflow:hidden;}
+.grid_list  li span{display:block; width:117px;height:80px; overflow:hidden; font-size:12px;}
+.grid_list  li span:first-child +span{height:30px; display:block; }
+.grid_list  li span img{width:100%;}
+
+/*layout*/
+.wrap{border:1px #F00 solid; width:900px; height:540px; margin:0 auto}
+.header{height:110px; outline:1px #F00 solid; margin:0 30px;}
+.cotents{border:1px #F00 solid; margin:11px 30px 0; height:380px; position:relative}
+
+.cotents .section{
+  border:1px #F00 solid;
+  position:absolute;
+  left:0;
+  right:234px;
+  top:0;
+  bottom:0
+}
+
+.cotents .section .headline{ border:1px #F00 solid; height:240px; }
+.cotents .section .headline ul li:first-child{position:absolute;}
+.cotents .section .headline ul li:first-child span {display: block; height:240px; border:1px #F00 solid; width:360px; overflow:hidden }
+.cotents .section .headline ul li:first-child img{width:100%}
+.cotents .section .headline ul li:first-child+li{margin-left:360px; margin-bottom:10px}
+.cotents .section .headline ul li:first-child+li+li{margin-bottom:10px;}
+.cotents .section .headline ul li:first-child+li+li+li{margin-left:360px;}
+.cotents .section .headline ul li:first-child~li{float:left;}
+
+.cotents .section .list_news{margin-top:10px;}
+.cotents .section .list_news .grid_list li{float:left; margin-left:4px;}
+.cotents .section .list_news .grid_list li:first-child{margin-left:0px;}
+
+
+
+.cotents .aside{
+  border:1px #F00 solid;
+  position:absolute;
+  left:606px;
+  right:0;
+  top:0;
+  bottom:0
+}
+.cotents .aside {font-size:12px;}
+.cotents .aside h2{font-size:12px; background-color:#000; color:#FFF; height:28px; line-height:28px; padding: 0 10px; margin-bottom:5px;}
+.cotents .aside .news_club ol{margin-bottom:5px}
+.cotents .aside .today_issue {margin-bottom:5px;}
+.cotents .aside .today_writh .thumb{ width:46px; height:64px; float:left; margin-right:5px;}
+
+    
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="header">
+            <h1>프레시안 뉴스</h1>
+        </div>
+        <div class="cotents">
+            <div class="section">
+                <div class="headline">
+                    <h2 class="hide">헤드라인뉴스</h2>
+                    <ul class="grid_list">
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                <!--<span class="title_group">-->
+                                <!--    <span class="repoter"></span>-->
+                                <!--    <strong class="title">"죽은 아들, 20년 키운 어미도 못알아보겟어."</strong>-->
+                                <!--</span>-->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                    </ul>
+                 </div>
+                 
+                 
+                <div class="list_news">
+                    <h2 class="hide">뉴스리스트</h2>
+                    <ul class="grid_list">
+                       <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""></span>
+                                <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="aside">
+                <div class="news_club">
+                    <h2 class="mainBgColor">뉴스클럽</h2>
+                    <ol>
+                        <li class="point"><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li class="point"><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li class="point"><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li class="point"><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                        <li><a href="#">"정운호 게이트, 檢·국정원 고위간부 </a></li>
+                    </ol>
+                </div>
+                <div class="today_issue">
+                    <h2 class="subBgColor">오늘의 이슈</h2>
+                    <div>
+                        <a href=""><strong>여동생을 미끼로 노벨상을 받아</strong></a>
+                        <a href=""><span>[월요일의 과학고전] &lt;이중나시&gt;</span></a>
+                    </div>
+                </div>
+                <div class="today_writh">
+                    <h2 class="subBgColor2">오늘의 서평</h2>
+                    <div>
+                        <a href="">
+                            <span class="thumb"><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/011.jpg" alt=""></span>
+                            <strong>나는 국정원보다 페이스북이 더 </strong>
+                            <span>당신은 데이터의 주인이 아니다</span>
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

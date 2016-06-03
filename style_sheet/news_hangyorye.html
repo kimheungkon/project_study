@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0; padding:0;list-style:none;}
+        .wrapper{width:auto;margin:0 auto}
+
+        .header{position:relative; width:auto;height:56px;background-image:url(../images/bg_hd.png); background-repeat:repeat-x;padding-top:5px;}
+
+        .h_l{float:left; display:inline-block;}
+        .newsstd{width:120px; height:22px; position:absolute; left:20px; bottom:30px; display:inline-block;background-image:url(../images/sp_nwstd.png); background-position:1px -85px;}
+        .msg{width:270px; height:20px; display:inline-block; background-image:url(../images/sp_nwstd.png); background-position:-115px -82px; position:absolute; left:140px; display:inline-block; }
+
+        .mynews{width:184px; height:31px; margin:0 auto; background-image:url(../images/sp_nwstd.png); background-position:5px -115px;}
+
+        .h_r{float:right;display:inline-block; }
+        .login{width:45px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-187px -174px; display:inline-block;margin-right:10px;}
+        .gnb{width:16px; height:18px; background-image:url(../images/sp_gnb.png); background-position:-200px -120px; display:inline-block;margin-right:4px;}
+        .vline1{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
+        .refresh{width:65px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-252px -150px; display:inline-block;}
+        .vline2{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
+        .setup{width:45px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-332px -150px; display:inline-block;}
+        .vline3{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
+        .naver{width:50px; height:9px; background-image:url(../images/sp_nwstd.png); background-position:-542px -277px; display:inline-block; margin:5px;}
+        
+        .contents_wrap{position:relative; width:auto; height:auto; }
+ 
+        .topmenu_wrap{position:relative; width:auto; height:28px; text-align:center;}        
+        .majorpress{width:73px; height:24px; background-image:url(../images/sp_nwstd.png); background-position:0px -252px;display:inline-block;vertical-align:middle;}
+        .total{width:68px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -281px;display:inline-block;vertical-align:middle;margin-left:10px;}
+        .broadcast{width:68px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -307px;display:inline-block;vertical-align:middle;margin-left:-5px;}
+        .it{width:32px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -385px;display:inline-block;vertical-align:middle;margin-left:-5px;}
+        .ennews{width:52px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -333px;display:inline-block;vertical-align:middle;margin-left:-5px;}
+        .sports{width:80px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -411px;display:inline-block;vertical-align:middle;margin-left:-5px;}
+        .magazn{width:89px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -437px;display:inline-block;vertical-align:middle;margin-left:-5px;}
+        .area{width:22px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -462px;display:inline-block;vertical-align:middle;margin-left:-5px;}        
+       
+        .news_wrap{width:auto; height:540px; margin:80px auto 0; outline:1px solid #f00;}
+        .newspaper{background-image:url(../images/bg_panel.png); padding:0 16px; width:900px; height:540px; margin:80px auto; outline:1px solid #f00;}
+
+        .news_head{width:840px;height:55px;padding:20px 0 33px;border-bottom:2px #000 solid;margin:0 auto 20px;}
+
+        .h_logo{width:260px;height:55px; float:left; margin:-8px auto;}
+        .h_right{width:468px;height:60px; margin:18px 0 0; float:right;} 
+        .h_left{width:182px;height:25px; clear:left; margin:55px 0}
+
+        .news_contents{width: 840px; height: 380px; position:relative; border-right:1px outline:1px solid #f00; margin:0 auto;}
+        .aside_left{width: 160px; height: 380px; position:absolute; left:0; border-right:1px solid #dedede;}
+        .aside_right{width: 296px; height: 380px; position:absolute; right:0;}
+        .center_news{width: 383px; height: 380px; position:absolute; left:160px; border-right:1px solid #dedede;}
+        .head_news{width: 355px; height: 225px; overflow:hidden; margin-left:14px;}
+        .head_news .title{width:100%; font-size:20px; letter-spacing:-3px; padding-bottom: 3px;}
+        .head_news li span img{width:100%; font-size:12px}
+        .head_news li span{font-size:12px}
+        
+
+        .photo_list li{margin-bottom:10px;}
+        .photo_list li span{display:block; width:145px;height:86px; overflow:hidden; font-size:12px;}
+        .photo_list li span:first-child +span{height:32px; display:block;}
+        .photo_list li span img{width:100%;}
+        a{text-decoration:none; color:black;}
+ 
+        .arrow_l{width:21px; height:42px; position:absolute; top:40%; left:460px;  background-image:url(../images/sp_nwstd.png); background-position:-19px -20px;}
+        .arrow_r{width:21px; height:42px; position:absolute; top:40%; left:1430px;  background-image:url(../images/sp_nwstd.png); background-position:-83px -20px;}
+        .autoskip{width:42px; height:11px; position:absolute; top:659px; left:507px;  background-image:url(../images/sp_nwstd.png); background-position:-525px -300px;}
+        .off{width:90px; height:23px; position:absolute; top:654px; left:560px; background-image:url(../images/sp_nwstd.png); background-position:-435px -455px;}
+        .page_no1-1{width:5px; height:11px; position:absolute; top:658px; left:1300px;  background-image:url(../images/sp_nwstd.png); background-position:-189px -116px;}
+        .page_no1-2{width:8px; height:11px; position:absolute; top:658px; left:1307px;  background-image:url(../images/sp_nwstd.png); background-position:-255px -116px;}
+        .page_slash{width:5px; height:11px; position:absolute; top:658px; left:1320px;  background-image:url(../images/sp_nwstd.png); background-position:-322px -132px;}
+        .page_no2-1{width:8px; height:11px; position:absolute; top:658px; left:1330px;  background-image:url(../images/sp_nwstd.png); background-position:-228px -132px;}
+        .page_no2-2{width:8px; height:11px; position:absolute; top:658px; left:1340px;  background-image:url(../images/sp_nwstd.png); background-position:-202px -132px;}
+        .pagg_arw_l{width:22px; height:22px; position:absolute; top:653px; left:1360px;  background-image:url(../images/sp_nwstd.png); background-position:-435px -585px;}  
+        .pagg_arw_r{width:22px; height:22px; position:absolute; top:653px; left:1380px;  background-image:url(../images/sp_nwstd.png); background-position:-460px -585px;} 
+
+        .bg_nv{position:relative; margin-top:100px; width:auto; height:98px;background-image:url(../images/bg_nv.png);background-repeat:repeat-x; padding-top:5px;}
+
+        .footer{position:relative;  width:auto; height:81px; background-image:url(../images/bg_ft.png);background-repeat:repeat-x; padding-top:5px;}
+
+        body{background-image:url(../images/bg_bd.png);}
+
+        
+    </style>
+    
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="h_l">
+                <div class="newsstd"></div>
+                <p class="msg"></p>
+            </div>
+            <div class="h_r">
+                <div class="login"></div>
+                <div class="gnb"></div>
+                <div class="vline1"></div>
+                <div class="refresh"></div>
+                <div class="vline2"></div>
+                <div class="setup"></div>
+                <div class="vline3"></div>
+                <div class="naver"></div>
+            </div>
+            <div class="mynews"></div>
+        </div>
+
+        <div class="contents_wrap">
+            <div class="topmenu_wrap">
+                <span class="majorpress"></span>
+                <span class="total"></span>
+                <span class="broadcast"></span>
+                <span class="it"></span>
+                <span class="ennews"></span>
+                <span class="sports"></span>
+                <span class="magazn"></span>
+                <span class="area"></span>
+            </div>
+            <div class="news_wrap">
+                <div class="newspaper">
+                    <div class="news_head">
+                        <div class="h_logo"><img src="../images/hangyorye_logo.png"></img></div>
+                        <div class="h_right"><img src="../images/hangyorye_h_banner.png"></img></div>
+                        <div class="h_left"><img src="../images/hangyorye_h_cont.png"></img></div>
+                    </div>
+                    <div class="news_contents">
+                        <div class="aside_left">
+                            <ul class="photo_list">
+                                <li>
+                                    <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0603/hani/154701/001.jpg" alt=""></span>
+                                    <span>피해자를 두번죽인 브라질 사법당국을 향해</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0603/hani/154701/002.jpg" alt=""></span>
+                                    <span>100년전 사람들이 상상했던 21세기 모습</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0603/hani/154701/003.jpg" alt=""></span>
+                                    <span>오구오구~ 새들의 사랑이야기</span>
+                                    </a>                            
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="center_news">
+                            <div class="head_news">
+                                <li>
+                                    <a href="#">
+                                    <span><strong class="title">10년 싸움 끝에 날아온 8640만원 '빚 독촉장'</strong></span>
+                                    <span><img src="http://static.naver.net/newsstand/2016/0603/hani/154701/004.jpg" alt=""></span>
+                                    <span>[카드뉴스]  8640만원의 빚 독촉장만 덩그러니 남았습니다. 서른 일곱살 전업 주부 오미선이 지난 10년 동안 싸운 결과물입니다. 스물 네살 때 KTX 여승무원이 됐던 벅찬 나날은 오래 가지 못했습니다. 오미선의 삶을 통해서 본 KTX 여승무원의…</span>
+                                    </a>
+                                </li>
+                            </div>
+                            
+                        </div>
+                        <div class="aside_right">
+                            
+                        </div>
+                    </div>
+
+                    <div class="arrow_l"></div>
+                    <div class="arrow_r"></div>
+                    <div class="autoskip"></div>
+                    <div class="off"></div>  
+                    <div class="page_no1-1"></div>
+                    <div class="page_no1-2"></div>
+                    <div class="page_slash"></div>
+                    <div class="page_no2-1"></div>
+                    <div class="page_no2-2"></div>
+                    <div class="pagg_arw_l"></div> 
+                    <div class="pagg_arw_r"></div>
+                </div>
+            </div>
+            <div class="bg_nv"></div>
+        </div>  
+        <div class="footer">
+        </div> 
+
+    </div>
+
+        
+</body>
+</html>

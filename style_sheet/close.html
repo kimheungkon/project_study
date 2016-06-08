@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        
+        a{display:block; width:200px; height:200px; background: #000; position:relative;}
+        a span{
+            display:block; 
+            height:5px; 
+            width: auto; 
+            background-color: #FFF; 
+            position:absolute; 
+            width:90%; 
+            margin-left:5%; 
+            top:50%; 
+            transition:1s;
+        }
+        .top{top:30%; }
+        .middle{}
+        .bottom{top:70%;}
+        
+        a:hover .top{transform-origin:38px 0; transform:rotate(45deg);z-index:1}
+        a:hover .middle{background: #000; z-index:0;}
+        a:hover .bottom{transform-origin:38px 0; transform:rotate(-45deg);z-index:1}
+        
+    </style>
+</head>
+<body>
+    
+    <a href="">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+        
+    </a>
+    
+</body>
+</html>

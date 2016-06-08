@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mondrian</title>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        .wrap{width:350px; height:500px; background-color:#000; margin:0 auto; position:relative; animation:wrap infinite alternate 2s; }
+        .wrap .box1{width:80px; height:90px; background-color:#fff; position:absolute; top:10px; left:10px; animation:box1 infinite alternate 2s;} 
+        .wrap .box2{width:80px; height:280px; background-color:#fff; position:absolute; top:110px; left:10px; animation:box2 infinite alternate 2s;}
+        .wrap .box3{width:80px; height:90px; background-color:#00f; position:absolute; top:400px; left:10px; animation:box3 infinite alternate 2s;}
+        .wrap .box4{width:240px; height:380px; background-color:#f00; position:absolute; top:10px; left:100px; animation:box4 infinite alternate 2s;}
+        .wrap .box5{width:190px; height:90px; background-color:#fff; position:absolute; top:400px; left:100px; animation:box5 infinite alternate 2s;}
+        .wrap .box6{width:40px; height:40px; background-color:#fff; position:absolute; top:400px; left:300px;}
+        .wrap .box7{width:40px; height:40px; background-color:#ff0; position:absolute; top:450px; left:300px;}
+
+
+
+    @keyframes wrap {
+        from {margin:0px auto;}
+        to {margin-top:500px; background-color:#000; transform:scale(1.5, 1.5)}
+    }
+    @keyframes box1 {
+        from {margin-left:0px;}
+        to {margin-left:800px; background-color:#000;}
+    }
+    @keyframes box2 {
+        from {margin-top:110px;}
+        to {margin-top:-800px; background-color:#000;}
+    } 
+    @keyframes box3 {
+        from {margin-top:0px;}
+        to {margin-left:300px; background-color:#000; transform:rotate(180deg)}
+    }    
+    @keyframes box4 {
+        from {margin-top:10px;}
+        to {margin-left:-600px; background-color:#fff;}
+    } 
+    @keyframes box5 {
+        from {margin-top:0px;}
+        to {margin-top:300px; background-color:#000;}
+    } 
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+</body>
+</html>

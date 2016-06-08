@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width:100px; 
+            height:100px; 
+            border:1px #F00 solid; 
+            background-color: #000;
+            
+            
+            /*transition: 1000ms cubic-bezier(0, 1.68, 1, -0.54) 500ms;   */
+        }
+        .box:hover{
+            animation:rightmove 1s;
+        }
+         
+        @keyframes rightmove {
+             0% {  margin:0;}
+             10% { margin-left:100px; }
+             20% { margin-top:100px; margin-left:100px; }
+             50% { margin-top:100px; margin-left:0;} 
+             70% { padding:20px;}
+             100% { margin:0; padding:0;}
+         }
+         
+            
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+    </div>
+    <div class="box1">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin:0; padding:0;}
+    body,height{height:100%;}
+    body{min-height:1000px;}
+    ul{list-style:none}
+    .left,.right,.center{border:1px #F00 solid; height:80px;}
+    .left{width:100px; float:left;}
+    .right{float:right;}
+    .right ul{font-size:0;}
+    .right li{display:inline-block;line-height:80px; padding:0 10px; outline:1px #F00 solid ; font-size:12px;}
+    .right li a{text-indent:-9999px;}
+    .center{text-align:center; line-height:80px;}
+    .wrapper{width:900px; height:540px; border:1px #F00 solid; margin:0 auto; position:relative;}
+    button{position:absolute; width:100px; height: 200px; background:#F00;  top:50%; margin-top:-100px;}
+    button.next{right:150px;}
+    button.prev{left:150px;}
+    .thumblist{border:1px #F00 solid; height:100px;background: #CCC; overflow:hidden; width:100%; position:absolute; bottom:0;}
+    .thumblist ul{width:2200px;}
+    .thumblist ul li{width:100px;height:100px; outline:1px #F00 solid;float:left;}
+    
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right">
+        <ul>
+            <li><a href=""><span>menu1</span></a></li>
+            <li><a href=""><span>menu1</span></a></li>
+            <li><a href=""><span>menu1</span></a></li>
+            <li><a href=""><span>menu1</span></a></li>
+            <li><a href=""><span>menu1</span></a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <!--<button>버튼</button><button>버튼</button>-->
+    </div>
+    
+    <button class="next">다음</button>
+        <button class="prev">이전</button>
+    <div class="wrapper">
+    </div>
+    
+    
+    <div class="thumblist">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+        </ul>
+        
+    </div>
+    
+</body>
+</html>

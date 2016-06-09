@@ -42,7 +42,43 @@
             background-color:rgba(255,255,255,0.8);
             box-shadow:0 2px 5px rgba(0,0,0,0.3);
             transition:1s;            
-        }     
+        } 
+ 
+        
+        .wrapper .header .mark{
+            float:left;
+        }
+        .wrapper .header .nav{
+            float:right;
+        }
+        .wrapper .header .nav button{
+            display:none;
+        }        
+        .wrapper .header .nav ul{
+            font-size:0;
+        }
+        .wrapper .header .nav li{
+            display: inline-block;
+            font-size:12px;
+            vertical-align:top;
+            line-height:97px;
+        }
+        .wrapper .header .nav li a{
+            padding:0 20px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            color: #08e9d1;
+            font-size:1.1em;
+            font-weight:bold;
+        }
+        .wrapper .header .nav li a:hover{
+            border-top:3px #ffb0b0 solid;
+            color:#ffb0b0;
+            background-color:rgba(255,255,255,0.5);
+        }
+
+
         .wrapper .header .mark a{
             display:block;
             width:104px; height:40px; padding:25px;
@@ -75,7 +111,36 @@
                 padding:0; margin-left:10px;
                 width:50px; height:40px;
                 background-size:contain;
+            }
+            .wrapper .header .nav button{
+                display:block;
+                height:40px; border:0 none;
+                padding:0 10px;
+                font-size:1.5em;
+                color:white;
+                background-color: #08e9d1;
+                cursor:pointer;
+            }
+            
+
+            .wrapper .header .nav button:hover + ul{
+                display:block;
             }            
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.7);
+            }
+            .wrapper .header .nav ul:hover {display:block;}
+
+            .wrapper .header .nav li a:hover{ 
+                border-top:0px none; border-left:3px solid #08e9d1;}
+            
+            .wrapper .header .nav ul li{
+                line-height:40px;
+            }             
+
+
         }
 
         
@@ -88,7 +153,19 @@
             <div class="mark">
                 <a href=""></a>
             </div>
+            <div class="nav">
+                <button>Main Menu</button>
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
         </div>
+
         <div class="logo"></div>
     </div>
 </body>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>트와이스</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        html,body{height:100%;}
+        ul,ol{list-style:none;}
+        .wrapper{
+            height:100%; 
+            /*border:1px #F00 solid;*/
+            background-color: white;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center top;
+        }
+        .wrapper .logo{
+            width: 350px;
+            height:350px;
+            background-image: url(../twice/twice_logo.png);
+            /*border:1px #F00 solid;*/
+            position:absolute; top:35%;
+            transform:scale(0.9,0.9);
+            transition:1s;
+        }
+        
+        .wrapper .logo:hover{
+            transform:scale(1.2,1.2);
+            opacity:0;
+        }
+        .wrapper .header{
+            position:fixed;
+            padding:0 30px;
+            box-sizing: border-box;            
+            width:100%;
+            left:0;
+            top:0;
+            height:100px; 
+            background-color:rgba(255,255,255,0.8);
+            box-shadow:0 2px 5px rgba(0,0,0,0.3);
+            transition:1s;  
+            z-index:1;
+        } 
+ 
+        
+        .wrapper .header .mark{
+            float:left;
+        }
+        .wrapper .header .nav{
+            float:right;
+        }
+        .wrapper .header .nav button{
+            display:none;
+        }        
+        .wrapper .header .nav ul{
+            font-size:0;
+        }
+        .wrapper .header .nav li{
+            display: inline-block;
+            font-size:12px;
+            vertical-align:top;
+            line-height:97px;
+        }
+        .wrapper .header .nav li a{
+            padding:0 20px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            color: #08e9d1;
+            font-size:1.1em;
+            font-weight:bold;
+        }
+        .wrapper .header .nav li a:hover{
+            border-top:3px #ffb0b0 solid;
+            color:#ffb0b0;
+            background-color:rgba(255,255,255,0.5);
+        }
+
+
+        .wrapper .header .mark a{
+            display:block;
+            width:104px; height:40px; padding:25px;
+            background-image: url(twice_symbol.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:1s;
+        }
+        .wrapper .header .mark a:hover{
+            transform:rotateY(180deg);
+        }        
+
+
+        /*d*/
+        .wrapper .sect-title{
+            position:relative;
+            top:100px;
+            background-image: url(title-discography.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 19%;
+            background-color:#dfdfdf;
+            width:100%;
+            height:100px;
+            margin:0px auto;
+            text-indent: -9999px;
+            }
+            
+            
+        .wrapper section{
+            max-width:1000px;
+            margin:0 auto;
+            position:relative;
+        }
+
+
+        .wrapper section .sect-main{
+            border:1px #f00 solid;
+            background-position:center;
+            max-width:1433px;
+            height:931px;
+            margin:3% auto;
+            position:relative;
+        }
+    
+        .wrapper section .sect-main .btn-global ul{
+            position:absolute;
+            display:inline-block;
+            outline:1px solid #f00;
+            
+        }
+        
+        
+        .wrapper section .sect-main .btn-global ul li{
+            display:inline-block;
+            width:20px; 
+            height:21px; 
+            border:1px #000 Solid; 
+            background-color:#000;
+            border-radius:50%;
+            color:#fff;
+            font-size:11px;
+            text-align:center;
+            line-height:2;
+        }
+        
+         .wrapper section .sect-main .fullbox{
+            display:inline-block;
+            position:absolute;
+            outline:1px #f00 solid;
+            top:10%;
+
+         }
+
+         
+         .wrapper section .sect-main .fullbox .box-l{
+            outline:1px red solid;
+            margin-top:20px;
+            width:400px;
+            display:table-cell;
+            vertical-align:top;    
+         }         
+        
+        .wrapper section .sect-main .fullbox .box-l img{
+            border:1px #cccccc solid;
+        }
+        
+        
+         .wrapper section .sect-main .fullbox .box-l .tracklist p{
+            font-size:11px;            
+        }
+         .wrapper section .sect-main .fullbox .box-l .tracklist li{
+            list-style:none;
+            font-size:11px;            
+        }
+
+         .wrapper section .sect-main .fullbox .box-r{
+            outline:1px red solid;
+            margin-top:20px;
+            display:table-cell;
+            vertical-align:top;   
+        }
+
+        
+      
+        
+        @media screen and (max-width:768px){
+            .wrapper{
+                background-image: url(twice_bg-720.jpg);
+                background-position: center center;
+            }
+            .wrapper .logo{
+                position:relative;
+                margin:0 auto;
+                top:20%;
+ 
+            }
+            .wrapper .header{
+                height:40px;
+                padding:0;
+                background-color:#fff;
+            } 
+            .wrapper .header .mark a{
+                padding:0; margin-left:10px;
+                width:50px; height:40px;
+                background-size:contain;
+            }
+            .wrapper .header .nav button{
+                display:block;
+                height:40px; border:0 none;
+                padding:0 10px;
+                font-size:1.5em;
+                color:white;
+                background-color: #08e9d1;
+                cursor:pointer;
+            }
+            
+
+            .wrapper .header .nav button:hover + ul{
+                display:block;
+            }            
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.7);
+            }
+            .wrapper .header .nav ul:hover {display:block;}
+
+            .wrapper .header .nav li a:hover{ 
+                border-top:0px none; border-left:3px solid #08e9d1;}
+            
+            .wrapper .header .nav ul li{
+                line-height:40px;
+            }             
+
+            .box-l,
+            .box-r{
+                display:block !important;}
+            
+            
+            .wrapper .sect-title{
+            position:relative;
+            top:40px;
+            background-image: url(title-discography.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+            background-color:#dfdfdf;
+            width:100%;
+            height:100px;
+            margin:0px auto;
+            text-indent: -9999px;
+            }
+
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mark">
+                <a href=""></a>
+            </div>
+            <div class="nav">
+                <button>Main Menu</button>
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="sect-title">DISCOGRAPHY</div>
+        <div class="btn-global">
+           <ul>
+               <li><a href="">KR</a></li>
+               <li><a href="">CH</a></li>
+               <li><a href="">TH</a></li>
+           </ul>
+        </div>
+
+        <section>
+            <div class="sect-main">
+                <div class="fullbox">          
+                    <div class="box-l">
+                        <img src="pagetwo.jpg"/>
+                        <div class="tracklist">
+                            <p>TRACKLIST</p>
+                                <ul>
+                                    <li>
+                                        1. Cheer up
+                                        <br>
+                                        2. 소중한 사람
+                                        <br>
+                                        3. Touchdown
+                                        <br>
+                                        4.  툭하면 톡
+                                        <br>
+                                        5. Woohoo
+                                        <br>
+                                        6. Headphone 써
+                                        <br>
+                                        7. I'm gonna be a star(Cd only)
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="box-r">
+                        <div class="album-title">
+                            <h2>PAGE TWO</h2>
+                            <p>2016-04-25</p>
+                        </div>
+                        <h3>"드디어 컴백, TWICE 4월 25일 미니 2집 [PAGE TWO] 발매. TWICE의 두 번째 이야기가 시작된다."
+                        <br>
+                        "TWICE 만의 건강하고 발랄한 매력을 한층 더 쌓아 올린 ‘출구 없는 회전문’ 걸그룹의 당찬 발걸음. "
+                        <br>
+                        </h3>
+                        
+                        <p>
+                            음원 역주행, 신인상, 7만장에 육박하는 앨범 판매량, 걸그룹 데뷔곡 기준 역대 최고 Youtube 조회수까지. 작년 하반기를 그야말로 뜨겁게 달궜던 TWICE가 드디어 4월 25일 미니 2집 [PAGE TWO]를 발매하며, 이들의 두번째 이야기를 시작한다. 신인으로서는 유례없는 성적을 일궈냈던 만큼 이번 미니 2집에 대한 팬들의 기대에 보답하기 위해 쉴 틈 없는 일정 속에서도 최고의 앨범을 만들기 위한 최선의 준비를 거듭해왔다.
+                            <br>
+                            <br>
+                            2집 [PAGE TWO]는 TWICE만의 고유한 매력을 한층 더 강화하면서도 더 많은 색깔을 담기 위한 시도를 놓치지 않았다. 전작 ‘OOH-AHH하게’로 자신 있게 선보였던 TWICE만의 유니크 스타일  ‘Color Pop’ 을 기반으로 더 세련된 구성과 다채로운 사운드를 담고 있는 타이틀 곡 “CHEER UP”을 시작으로, 멤버 채영의 랩 메이킹과 함께 18년 만에 리메이크되는 “소중한 사랑”, TWICE가 가진 활기찬 개성과 똑닮은 다이나믹 사운드의 “Touchdown” 청량감과 부드러움을 동시에 잡아낸 ‘툭하면 톡’ 힙합, 펑키, 그루브를 하나로 모아, 말 그대로 ‘신나기 이를 데 없는’ ‘어서 우리 세계로 들어오라’는 자신감 넘치는 가사의 “WooHoo” TWICE만의 독특한 정서로 이별의 슬픔을 표현한 “Headphone 써”까지. 국내외 정상급 작곡가/ 작사가 및 엔지니어 팀과 함께 한 이번 미니 2집 [PAGE TWO]는 ‘눈으로 한번, 귀로 한번’ 두 번 감동을 주겠다는 TWICE의 각오를 넘어서는, 너무나 매력적인 음악적 스펙트럼을 자랑한다. 여기에 하나 더, SIXTEEN 때 많은 화제를 낳았던 “I’m gonna be a star”를 완곡으로 CD에만 수록, 팬들의 기대감을 증폭시키고 있다.
+                            <br>
+                            <br>
+                            “예쁜 애 옆 예쁜 애 옆 예쁜 애” 라는 수식어가 회자될 정도로 비주얼 매력이 앞서는 TWICE이지만, 팬들 앞에 ‘Group TWICE’로서 더 발전된 모습을 보여드리기 위해 끊임없이 노력해 온 음악적 성장 또한 엿볼 수 있는 이번 앨범은 TWICE의 한층 더 성장한 ‘무궁무진한’ 매력을 보여주기에 조금도 부족함이 없겠다.
+                            <br>
+                            나아가 세번째, 네번째 앞으로 펼쳐질 많은 이야기들을 너무나 궁금하게 만들. 새로운 시작점으로서의 즐거움과 의미로 가득 차있다. 이번 앨범을 통해 무엇보다도 팬들에게 한발 더 가까이 다가가고 싶다는 순수한 포부를 밝히고 있는 TWICE. 평균 연령 18세지만 이 당차기 이를 데 없는 9명의 성장을 지켜보고 응원하는 것은 우리 모두가 각자 가지고 있는 꿈을 이뤄 나가는 것과 크게 다르지 않을 것만 같다. 그래서 TWICE를 마주할 때 설레는 마음을 더 감출 수가 없는게 아닐까. 이제 그 설레고 즐겁기 이를 데 없는 마치 놀이동산 같고, 마법 같은 두 번째 이야기가 펼쳐진다. 우리의 눈 앞에 한번, 그리고 우리의 귀에 한번
+                            <br>
+                        </p>
+                    </div>                        
+                </div>
+
+            </div> 
+        
+       
+        
+        
+        
+        </section>
+        
+    </div>
+</body>
+</html>cography

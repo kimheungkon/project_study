@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style type="text/css">
-        *{margin:0; padding:0;list-style:none;}
+        *{margin:0; padding:0;}
+        body,height{height:100%;}
+        body{min-height:810px;}
+        ul{list-style:none;}
+        .header{width:auto; height:56px; position:relative; outline:1px solid #f00;
+            background-image:url(../images/bg_hd.png); background-repeat:repeat-x;padding-top:1px;}
+        .h_left{width:100px; float:left; outline:1px solid #f00;}
+        .h_left .newsstd{width:120px; height:22px; position:absolute; left:20px; bottom:30px; 
+            background-image:url(../images/sp_nwstd.png); background-position:1px -85px;}
+        .h_left .msg{width:250px; height:20px; position:absolute; left:120px; bottom:5px; 
+            background-image:url(../images/sp_nwstd.png); background-position:-115px -82px;}        
+        .h_right{position:absolute; right:10px; top:10px; outline:1px solid #f00;}
+        .h_right ul{font-size:0; outline:1px solid #f00;}
+        .h_right li, span{display:inline-block; padding:0 10px; outline:1px solid #f00; font-size:12px;} 
+        .h_right ul .login{width:27px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-187px -174px; margin-right:10px; text-indent:-9999px;}         
+        .h_right ul .gnb{width:1px; height:18px; background-image:url(../images/sp_gnb.png); background-position:-197px -120px; margin-right:10px; text-indent:-9999px;}
+        .h_right ul .refresh{width:50px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-252px -150px; margin-right:10px; text-indent:-9999px;}        
+        .h_right ul .setup{width:27px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-332px -150px; margin-right:10px; text-indent:-9999px;}
+        .h_right ul .naver{width:30px; height:9px; background-image:url(../images/sp_nwstd.png); background-position:-542px -277px; margin-right:10px; text-indent:-9999px;}
+        .h_right ul .bar{width:1px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-238px -150px; margin-right:10px; text-indent:-9999px;}        
+        .h_center{text-align:center;}
+        .h_center .mynews{width:87px; height:29px; margin:3px auto 0; margin-right:-6px; display:inline-block;
+            background-image:url(../images/sp_nwstd.png); background-position:-1px -116px;}
+        .h_center .allpress{width:87px; height:29px; margin:3px auto 0; display:inline-block;
+            background-image:url(../images/sp_nwstd.png); background-position:-88px -150px;}
+ 
+ 
         .wrapper{width:auto;margin:0 auto}
 
-        .header{position:relative; width:auto;height:56px;background-image:url(../images/bg_hd.png); background-repeat:repeat-x;padding-top:5px;}
-
-        .h_l{float:left; display:inline-block;}
-        .newsstd{width:120px; height:22px; position:absolute; left:20px; bottom:30px; display:inline-block;background-image:url(../images/sp_nwstd.png); background-position:1px -85px;}
-        .msg{width:270px; height:20px; display:inline-block; background-image:url(../images/sp_nwstd.png); background-position:-115px -82px; position:absolute; left:140px; display:inline-block; }
-
-        .mynews{width:184px; height:31px; margin:0 auto; background-image:url(../images/sp_nwstd.png); background-position:5px -115px;}
-
-        .h_r{float:right;display:inline-block; }
-        .login{width:45px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-187px -174px; display:inline-block;margin-right:10px;}
-        .gnb{width:16px; height:18px; background-image:url(../images/sp_gnb.png); background-position:-200px -120px; display:inline-block;margin-right:4px;}
-        .vline1{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
-        .refresh{width:65px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-252px -150px; display:inline-block;}
-        .vline2{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
-        .setup{width:45px; height:19px; background-image:url(../images/sp_nwstd.png); background-position:-332px -150px; display:inline-block;}
-        .vline3{width:2px; height:20px; background-image:url(../images/sp_nwstd.png); background-position:-244px -150px; display:inline-block;}
-        .naver{width:50px; height:9px; background-image:url(../images/sp_nwstd.png); background-position:-542px -277px; display:inline-block; margin:5px;}
         
         .contents_wrap{position:relative; width:auto; height:auto; }
  
@@ -37,14 +46,16 @@
         .magazn{width:89px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -437px;display:inline-block;vertical-align:middle;margin-left:-5px;}
         .area{width:22px; height:18px; background-image:url(../images/sp_nwstd.png); background-position:-99px -462px;display:inline-block;vertical-align:middle;margin-left:-5px;}        
        
+
+
         .news_wrap{width:auto; height:540px; margin:80px auto 0; outline:1px solid #f00;}
         .newspaper{background-image:url(../images/bg_panel.png); padding:0 16px; width:900px; height:540px; margin:80px auto; outline:1px solid #f00;}
 
         .news_head{width:840px;height:55px;padding:20px 0 33px;border-bottom:2px #000 solid;margin:0 auto 20px;}
 
-        .h_logo{width:100px;height:50px; float:left; margin:10px auto 0;}
-        .h_right{width:468px;height:60px; margin:18px 0 0; float:right;} 
-        .h_left{width:180px;height:25px; clear:left; margin:55px 0}
+        .nh_logo{width:100px;height:50px; float:left; margin:10px auto 0;}
+        .nh_right{width:468px;height:60px; margin:18px 0 0; float:right;} 
+        .nh_left{width:180px;height:25px; clear:left; margin:55px 0}
 
         .news_contents{width: 840px; height: 380px; position:relative; border-right:1px outline:1px solid #f00; margin:0 auto;}
         .aside_left{width: 160px; height: 380px; position:absolute; left:0; border-right:1px solid #dedede;}
@@ -95,24 +106,33 @@
     
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="h_l">
-                <div class="newsstd"></div>
+    <div class="header">
+        <div class="h_left">
+            <div class="newsstd">
                 <p class="msg"></p>
             </div>
-            <div class="h_r">
-                <div class="login"></div>
-                <div class="gnb"></div>
-                <div class="vline1"></div>
-                <div class="refresh"></div>
-                <div class="vline2"></div>
-                <div class="setup"></div>
-                <div class="vline3"></div>
-                <div class="naver"></div>
-            </div>
-            <div class="mynews"></div>
         </div>
+        <div class="h_right">
+            <ul>
+                <li class="login"><a href=""><span>login</span></a></li>
+                <li class="gnb"><a href=""><span>gnb</span></a></li>
+                <span class="bar">세로바</span>
+                <li class="refresh"><a href=""><span>refresh</span></a></li>
+                <span class="bar">세로바</span>
+                <li class="setup"><a href=""><span>setup</span></a></li>
+                <span class="bar">세로바</span>
+                <li class="naver"><a href=""><span>naver</span></a></li>
+            </ul>
+        </div>
+        <div class="h_center">
+            <div class="mynews"></div>
+            <div class="allpress"></div>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+
 
         <div class="contents_wrap">
             <div class="topmenu_wrap">
@@ -128,9 +148,9 @@
             <div class="news_wrap">
                 <div class="newspaper">
                     <div class="news_head">
-                        <div class="h_logo"><img src="../images/hangyorye_logo.png"></img></div>
-                        <div class="h_right"><img src="../images/hangyorye_h_banner.png"></img></div>
-                        <div class="h_left"><img src="../images/hangyorye_h_cont.png"></img></div>
+                        <div class="nh_logo"><img src="../images/hangyorye_logo.png"></img></div>
+                        <div class="nh_right"><img src="../images/hangyorye_h_banner.png"></img></div>
+                        <div class="nh_left"><img src="../images/hangyorye_h_cont.png"></img></div>
                     </div>
                     <div class="news_contents">
                         <div class="aside_left">

@@ -1,0 +1,32 @@
+@xs:20%;
+@lg:100%;
+@df:30%;
+@ms:50%;
+
+
+.col-xs { width:@xs; }
+
+body{margin:111px;}
+    ul{
+        list-style: none
+        margin:0;
+        padding:0;
+    }
+    .menu{
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        overflow: hidden;
+        ul{
+            background-color: @menu-color;
+            li{
+                border-bottom: 1px solid #ccc;
+                a{color: #000}
+            }
+        }
+    }
+
+.col-xs{width:@xs - 20%}
+.col-ms{width:@ms}
+.col-df{width:@df}
+.col-lg{width:@lg}

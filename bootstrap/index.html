@@ -18,39 +18,72 @@
     <![endif]-->
     
     <style type="text/css">
-      
+      body{
+        background-color: #fafafa;
+      }
+      .navbar{border:0 none;}
       .navbar-brand{
         background-image:url(http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/gnb_logo_x2.png);
         background-size:146px 65px;
-        width:146px; height:37px;
+        width:146px;
+        height:37px;
       }
-
-      /*.navbar-brand::before{*/
-      /*  content:" ";*/
-      /*  width:100px;*/
-      /*  height:100px;*/
-      /*  border:1px #F00 solid;*/
-      /*}*/
-
-
-
-
-
+      main{
+        background-image: url(http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/bio_bg.jpg);
+        background-repeat: no-repeat;
+        background-position:0 right;
+        min-height:500px;
+         padding:50px 0 100px;
+        }
+      
+      .title{border-bottom:2px #666 solid;}
+      .infomation{margin-top:100px;}
+      .infomation strong{font-size:2em;}
+      .infomation dt{float:left; margin-right:10px; color:#AAA;}
+      .infomation dd{color:#000;}
+      .infomation dt,
+      .infomation dd{line-height:240%; font-size:0.75em;}
+      
+      .footer{border-top:1px #CCC solid;}
+      .footer address{padding:10px 0;}
+      .footer address span{display: block; font-size:12px;}
+      
+      
+      /*.navbar-brand::before{
+        content:" ";
+        width:100px;
+        height:100px;
+        border:1px #F00 solid;
+      }*/
+      
+      
+      
       
       @media (min-width: 992px) {
-       .container {width:788px;}
-       
-       .navbar.gnb{
-         margin-top:35px;
-         height:70px;
-         border:1px #F00 solid;
-       }
-
+         .container {width:788px;}
+         .navbar.gnb{
+           margin-top:35px;
+           height:70px;
+         }
+         
+         
+      }
+      @media (min-width: 768px){
+        .navbar.gnb{
+           margin-top:35px;
+           height:70px;
+           
+           
+         }
       }
       
+      .box{border:1px #F00 solid;
+        background-image: url(http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/bio_bg.jpg);;
+        padding-bottom:50%;
+        
+      }
     </style>
     
-
     
   </head>
   <body>
@@ -58,36 +91,70 @@
     
     <div class="container">
     <!--http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/header_logo_x2.png-->
-      <nav class="navbar gnb">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"></a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> 
-        </div>
- 
-        
-        <ul class="nav navbar-nav pull-right">
-          <li><a href="">biography</a></li>
-          <li><a href="">filmography</a></li>
-          <li><a href="">star media</a></li>
-          <li><a href="">schedule</a></li>
-        </ul>  
-  
+      <nav class="navbar gnb navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+            <a class="navbar-brand" href="#"></a>
+           
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#aaa">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+          <div class="collapse navbar-collapse" id="aaa">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="">biography</a></li>
+              <li><a href="">filmography</a></li>
+              <li><a href="">star media</a></li>
+              <li><a href="">schedule</a></li>
+            </ul>
+          </div>
+        </div>      
       </nav>
-    
-  
-    
+      <div class="title">
+        <h3 class="text-right">SONG JOONG KI</h3>
+      </div>
+      <span class="subtitle text-uppercase">biography</span>
+      <main>
+      
+      
+     
+        <div class="infomation">
+            <strong>송중기 <span class="text-capitalize">song joong gi</span></strong>
+            <dl>
+              <dt>생년월일</dt>
+              <dd>1985년 9월 19일</dd>
+              <dt>신체사이즈   </dt>
+              <dd>178cm, 65kg</dd>
+              <dt>혈액형</dt>
+              <dd>A형</dd>
+              <dt>데뷔   </dt>
+              <dd>2008년 영화 [쌍화점]</dd>
+              <dt>학력   </dt>
+              <dd>성균관대학교 경영학</dd>
+            </dl>
+        </div>
+      </main>
+      <div class="footer">
+      <address>
+        
+        <div class="pull-left text-left">
+          <span>6F, UNO B/D, 112-18, NONHYEON-DONG, GANGNAM-GU, SEOUL, KOREA</span>
+          <span>TEL. +82-2-558-5320</span>
+        </div>
+        
+        <div class="pull-right text-right">
+          <span>COPYRIGHT BLOSSOM CORP. ALL RIGHT RESERVED</span>
+          <span>DESIGN BY </span>
+        </div>
+      </address>
+    </div>
     </div>
     
-    
-    
-    
-    
-
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->

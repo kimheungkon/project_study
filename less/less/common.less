@@ -1,0 +1,81 @@
+body{font-family: "돋움",sans-serif;}
+
+@small:5px;
+@large:10px;
+@bg-defualt:#78c4ff;
+@bg-first:#9cea96;
+
+
+
+.radius(@size:10px){
+    -webkit-border-radius: @size;
+    -moz-border-radius: @size;
+    border-radius: @size;
+}
+
+.inlin-block(){
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+}
+
+.btn-style(@line_width:1px, @height:30px, @fontsize:1em, @bgcolor:#CCC){
+    border:@line_width #CCC solid;
+    .inlin-block();
+    .radius(@large);
+    vertical-align: middle;
+    line-height:@height;
+    height:@height;
+    text-decoration: none;
+    font-size:@fontsize;
+    padding:0 20px;
+    cursor: pointer;
+    font-weight:normal;
+    background-color:@bgcolor;
+    
+}
+
+.btn{
+    .btn-style()
+}
+
+.btn-point{
+    .btn-style(1px,40px,1em,@bg-defualt);
+}
+
+.btn-point2{
+    .btn-style(2px,30px);
+}
+
+a.btn{
+  
+}
+
+
+@color:#333;
+.btn-def{
+    background-color:@color;
+    &:hover{
+        background:@color *3;
+    }
+}
+
+
+
+div.box{
+    width:percentage(240/950);
+    height:100px;
+    background-color:fadeout(@bg-defualt,50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+.asidemenu(@maxwidth) {
+    width:@maxwidth;
+    .topmenu(@maxwidth);
+}
+
+.topmenu(@a){
+    height:(@a+200px)
+}
+
+.box1 {
+    width:100%;
+    .topmenu(20px);
+    background-color:#f00;
+}
+
+.box2 {
+    .asidemenu(100px);
+    background-color:#000;
+    color:#fff;
+    
+}
+
+

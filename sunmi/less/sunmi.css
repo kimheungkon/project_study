@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+.wrapper {
+  background-image: url("../images/bg-pc.jpg");
+  background-size: cover;
+  height: 100%;
+  /* header end */
+  /* logo end */
+}
+.wrapper .header {
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0px 20px;
+  overflow: hidden;
+  /* mark a end */
+  /* .nv end */
+}
+.wrapper .header .mark a {
+  corsor: pointer;
+  display: block;
+  width: 104px;
+  height: 52px;
+  float: left;
+  padding: 25px;
+  background-image: url("../images/logo-sw.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+}
+.wrapper .header .mark a:hover {
+  transform: rotateY(360deg);
+}
+.wrapper .header .nav {
+  float: right;
+  /* ul end */
+  /* button end */
+}
+.wrapper .header .nav ul {
+  font-size: 0;
+  /* li end */
+}
+.wrapper .header .nav ul li {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  /* li a end */
+}
+.wrapper .header .nav ul li:hover a {
+  border-top: 3px #fff solid;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #FFF;
+}
+.wrapper .header .nav ul li a {
+  padding: 42px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-wieight: bold;
+  color: #3F3F3F;
+  transition: 0.2s;
+}
+.wrapper .header .nav button {
+  display: none;
+}
+.wrapper .logo {
+  background-image: url("../images/mainlogo.png");
+  width: 240px;
+  height: 100px;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -120px;
+  margin-top: -50px;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.6;
+  transition: 1s;
+}
+.wrapper .logo:hover {
+  transform: scale(1.8, 1.8);
+}
+/* wrapper end */
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 57px;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  padding: 0;
+  z-index: 1;
+}
+.footer .jyplogo a {
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 45px;
+  background-image: url("../images/jyplogo-w.png");
+  text-indent: -9999px;
+  top: 5px;
+  left: 7%;
+  float: left;
+  z-index: 1;
+}
+.footer .snsicon {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 30px;
+  text-align: right;
+  top: 10px;
+  right: 3%;
+  float: right;
+}
+.footer .flaticon-twitter:before {
+  font-size: 17px;
+  color: #000;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 7px;
+  border-radius: 20%;
+  background: #e4e4e4;
+}
+.footer .flaticon-facebook-logo:before {
+  font-size: 17px;
+  color: #000;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 7px;
+  border-radius: 20%;
+  background: #e4e4e4;
+}
+.footer .flaticon-youtube:before {
+  font-size: 17px;
+  color: #000;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 7px;
+  border-radius: 20%;
+  background: #e4e4e4;
+}
+/* footer end */
+/*dklafkld*/

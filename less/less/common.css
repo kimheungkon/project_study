@@ -1,0 +1,68 @@
+body {
+  font-family: "돋움", sans-serif;
+}
+.btn {
+  border: 1px #CCC solid;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: normal;
+  background-color: #CCC;
+}
+.btn-point {
+  border: 1px #CCC solid;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 40px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: normal;
+  background-color: #78c4ff;
+}
+.btn-point2 {
+  border: 2px #CCC solid;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: normal;
+  background-color: #CCC;
+}
+.btn-def {
+  background-color: #333;
+}
+.btn-def:hover {
+  background: #999999;
+}
+div.box {
+  width: 25.26315789%;
+  height: 100px;
+  background-color: rgba(120, 196, 255, 0.5);
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+    //사용자가 값을 입력해야 함
+    //사용자가 입력한 값이 홀수 또는 짝수인지 비교
+    //홀수나 짝수를 alert 출력
+
+
+    // var x = prompt("숫자를 입력하세요");
+    // var y = x%2;
+
+    // if(y == 0){
+    //     alert("짝수")
+    // }else if(y == 1){
+    //     alert("홀수")
+    // }
+
+
+    //랜덤 정수를 만든다
+    //랜덤수가 홀수인지 짝수인지 비교하여 num이라는 변수에
+    //"홀 " 또는 "짝 " 문자열을 담는다.
+    //사용자  입력란이 나온다.
+    //입력란에 "홀" 또는 "짝"을 입력하여 num 변수와 일치하면
+    //"정답입니다. 좋겠네요.."
+    //"오답일시 꺼져"
+    //"올바른 값을 입력하지 않았을시 알아들을 수 없으니 꺼져"
+    //라고 메세지를 띄운 후 게임이 종료된다.
+    
+    
+    var ran = Math.floor(Math.random()*100);
+    var num;
+
+    if(ran%2 == 0){
+        num ="짝";
+    }else if(ran%2 == 1){
+        num ="홀";
+    }
+         console.log(num)
+
+    var users = prompt("홀이나 짝을 입력하세요")
+    if(users == num){
+        alert("정답입니다. 좋겠네요");
+    }else if(users == "홀" || users == "짝" ){
+        alert("오답입니다. 안타깝네요");
+    }else{
+        alert("알아들을 수 없네요");
+    }
+
+
+
+
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

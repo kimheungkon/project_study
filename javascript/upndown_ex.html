@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var coin = 10;
+    var x = Math.floor(Math.random() * 100);
+
+
+    for(i=0; i < coin; i++){
+        var values = prompt("숫자를 맞춰보세요");
+
+            if(i < coin){
+                if(values > x){
+                    alert("그 숫자보다 작습니다");
+                }
+                else if(values < x){
+                    alert("그 숫자보다 큽니다");
+                }
+                else if(values == x){
+                    alert("정답입니다");
+                    break;
+                }
+            }
+            if(i == coin-1){
+                alert("다음 기회에 도전하세요");
+                
+            }
+    
+    }
+        console.log(values)
+
+
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

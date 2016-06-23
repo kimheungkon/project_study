@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+    //     i = 0
+    //     i = i +1;
+    //     1+"+"+1
+    //   for(i=0;i < 10; i++){
+            
+    //         for(j=0;j<10;j++){
+                
+    //             console.log(i*j);
+    //         }
+    //     }
+
+        
+    //   for(i=0;i < 10; i++){
+    //         console.log(i+"단");
+    //         for(j=0;j<10;j++){
+                
+    //             console.log(i+"*"+j+"="+i*j);
+    //         }
+    //     }        
+
+
+        var deck = [];
+        var shape = ["♥","◆","♣","♠"]; 
+        
+      for(i=0;i < 4; i++){
+            
+            for(j=1;j<13+1;j++){
+                
+                deck.push(shape[i]+j)
+            
+            }
+            
+        }
+      users=[];
+      rans = Math.floor(Math.random() * deck.length)
+       
+      users.push(deck[rans])
+       
+      console.log(users)
+       
+      deck.splice(rans,1)
+      console.log(deck)   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*for(초기값;조건;증가){
+            반복실행할 내용
+        } */
+        
+        
+        
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>04_prepend_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			.newEl { color:red; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>prepend()메서드를 사용하여 표시된 부분 위에 3-0엘리먼트(클래스 newEl을 적용)를 추가시켜 주세요.</span>
+		<div id="wrapper">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3
+					<ul>
+						<li>3-1 ( 위에 3-0을 채워주세요. )</li>
+						<li>3-2</li>
+						<li>3-3</li>
+						<li>3-4</li>
+					</ul>
+				</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

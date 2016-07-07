@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>03_on_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			#box { width:200px; height:200px; border:2px solid blue; 
+			margin-left:300px; margin-top:200px; background-color:blue;}
+			#box.mouseover { background-color: red; }
+			#box.mouseout { background-color: green; }
+			#box.mousedown { background-color: purple; }
+			#box.mouseup { background-color: #FF9C00; }
+			#box > p { padding:30px; color:white; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var box = $('#box');
+				
+				box.bind({
+					mouseover:function(){
+						var tg = $(this);  // this를 통해서 event를 발생한 엘리먼트에 접근가능하다.
+						tg.removeClass().addClass('mouseover');
+						tg.find('> p').text('mouseover');
+					},
+					mouseout:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mouseout');
+						tg.find('> p').text('mouseout');
+					},
+					mousedown:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mousedown');
+						tg.find('> p').text('mousedown');
+					},
+					mouseup:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mouseup');
+						tg.find('> p').text('mouseup');
+					}
+				});
+				
+				var btn1 = $('#btn1');
+				var btn2 = $('#btn2');
+				
+				btn1.bind('click', function(){
+					
+				});
+				
+				btn2.bind('click', function(){
+					
+				});		
+			});
+		</script>
+	</head>
+	
+	<body>
+	<input id="btn1" type="button" value="mouseout 이벤트 제거" />
+	<input id="btn2" type="button" value="모든 이벤트 제거" /> 
+	<div id="box" class="out">
+		<p>mouseout</p>
+	</div>
+	</body>
+</html>

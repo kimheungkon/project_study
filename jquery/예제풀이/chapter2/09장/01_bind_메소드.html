@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_bind_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			#box { width:200px; height:200px; border:2px solid blue; margin-left:300px; margin-top:200px; background-color:blue;}
+			#box.mouseover { background-color: red; }
+			#box.mouseout { background-color: green; }
+			#box.mousedown { background-color: purple; }
+			#box.mouseup { background-color: #FF9C00; }
+			#box > p { padding:30px; color:white; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var box = $('#box');
+				
+				/*box.bind('mouseover', function(){
+					var tg = $(this);  // this를 통해서 event를 발생한 엘리먼트에 접근가능하다.
+					tg.removeClass().addClass('mouseover');
+					tg.find('> p').text('mouseover');
+				});
+				
+				box.bind('mouseout', function(){
+					console.log(this);
+					var tg = $(this);
+					tg.removeClass().addClass('mouseout');
+					tg.find('> p').text('mouseout');
+				});
+				
+				box.bind('mousedown', function(){
+					var tg = $(this);
+					tg.removeClass().addClass('mousedown');
+					tg.find('> p').text('mousedown');
+				});
+				
+				box.bind('mouseup', function(){
+					var tg = $(this);
+					tg.removeClass().addClass('mouseup');
+					tg.find('> p').text('mouseup');
+				});*/
+				
+				box.bind({
+					mouseover:function(){
+						var tg = $(this);  // this를 통해서 event를 발생한 엘리먼트에 접근가능하다.
+						tg.removeClass().addClass('mouseover');
+						tg.find('> p').text('mouseover');
+					},
+					mouseout:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mouseout');
+						tg.find('> p').text('mouseout');
+					},
+					mousedown:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mousedown');
+						tg.find('> p').text('mousedown');
+					},
+					mouseup:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('mouseup');
+						tg.find('> p').text('mouseup');
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="box">
+			<p>eventType명으로 텍스트 컨테츠를 설정해 주세요.</p>
+		</div>
+	</body>
+</html>

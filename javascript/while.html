@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+
+// 익명함수
+//     var aa = function(){
+//     }
+    
+// // 함수
+//     sum()
+//     function sum(){
+//         alert("나 불렀어?")
+//     }   
+    
+// 클로져
+
+// 콜백
+
+        
+        // var i = 0;
+        
+        // while(i<5){
+        //     console.log(i)
+        // }
+        //         i++
+
+        
+    // var a = 10;   
+
+    //     switch(a){
+            
+    //         case 1 : console.log(a);
+    //                 break;
+    //         case 2 : console.log(a);
+    //                 break;
+    //         case 3 : console.log(a);
+    //                 break;
+    //         case 4 : console.log(a);
+    //                 break;
+    //     }
+        
+    // var a = 10;
+    // var b = 20;
+    // var z = null;
+    
+    // function sum(){
+    //     z =a+b
+    // }
+    // sum()
+    // console.log(z)
+ 
+ 
+    var member = [];
+    
+    function addUser(){
+        
+        
+        var user = prompt("사용자수를 입력하세요");
+        
+        var i=0;
+        while(i < user){
+             var userscore =  prompt("점수를 입력");
+        
+             member.push(Number(userscore))    
+            i++
+        }
+        
+        console.log(member);
+        
+     }
+    
+    </script>
+</head>
+<body>
+<button onclick="addUser();">사용자 점수입력</button>
+<button onclick="avg();">점수 계산 </button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>06_animate_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			#wrapper { margin-top:140px; margin-left: 330px;}
+			#controller { padding: 10px;}
+			#box { width:150px; height:150px; background-color:red; border:2px solid blue; position:absolute; left:200px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var box = $('#box');
+				var bigBtn = $('#controller > .big');
+				var smallBtn = $('#controller > .small');
+				var leftBtn = $('#controller > .left');
+				var rightBtn = $('#controller > .right');
+				
+				bigBtn.click(function(){
+					
+				});
+				
+				smallBtn.click(function(){
+					
+				});
+				
+				leftBtn.click(function(){
+					
+				});
+				
+				rightBtn.click(function(){
+					
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+	<div id="wrapper">
+		<div id="controller">
+			<input class="big" type="button" value="크고 불투명하게 하기" />
+			<input class="small" type="button" value="작고 투명하게 하기" />
+			<input class="left" type="button" value="왼쪽으로 이동 하기" />
+			<input class="right" type="button" value="오른쪽으로 이동 하기" />
+		</div>
+		<div id="box">
+		</div>
+	</div>
+	</body>
+</html>

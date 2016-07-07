@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+html {overflow-x:hidden}
+
+/*  layout  */
+div.mWrap						{ position: relative; width:100%; min-height:100%; text-align:center; display:block; }
+div.mContents					{ position:absolute; top:0; left:0; min-height:100%; text-align:left; margin:0 75px 0 200px; padding:0; background:#fff; overflow:hidden; display:block; }
+ 
+/*  skipMenu  */
+div.skipMenu					{ display:none; width:1px; height:1px; line-height:1px; }
+
+/* made Jang yongho */
+.mContents {overflow:hidden; width:100%; min-width:1445px; margin:0px !important}
+.mContents .parallax { position:relative; width:1280px; height:3600px; margin:0 auto; }
+
+.mSection01, .mSection02, .mSection03 {overflow:hidden; position:absolute; left:50%; width:1645px; height:1200px; margin-left:-822px;}
+.mSection01 > *, .mSection02 > *, .mSection03 > * {position:absolute;}
+
+.mSection01 {top:0px; background:url(../images/index/bg_main01.jpg) no-repeat left top;}
+.mSection02 {top:1200px; background:url(../images/index/bg_main02.jpg) no-repeat left top; z-index:1000}
+.mSection03 {top:2400px; background:url(../images/index/bg_main03.jpg) no-repeat left top; z-index:2000}
+
+/* section01 */
+.mSection01 .arrow {position:absolute; left:300px; top:10px; width:49px; height:56px; z-index:500 }
+.mSection01 .tit {left:291px; top:200px; z-index:500}
+.mSection01 .txt {left:297px; top:390px; z-index:400}
+.mSection01 .obj01 {left:117px; top:0px; width:256px; height:161px; background:url(../images/index/mSection01_obj01.png) no-repeat left top; z-index:300}
+.mSection01 .obj02 {left:729px; top:363px; width:104px; height:67px; background:url(../images/index/mSection01_obj02.png) no-repeat left top; z-index:300}
+.mSection01 .obj03 {left:909px; top:452px; width:104px; height:67px; background:url(../images/index/mSection01_obj03.png) no-repeat left top; z-index:300}
+.mSection01 .obj04 {left:1121px; top:578px; width:54px; height:67px; background:url(../images/index/mSection01_obj04.png) no-repeat left top; z-index:300}
+.mSection01 .obj05 {left:1197px; top:591px; width:41px; height:34px; background:url(../images/index/mSection01_obj05.png) no-repeat left top; z-index:300}
+.mSection01 .obj06 {left:1238px; top:389px; width:405px; height:315px; background:url(../images/index/mSection01_obj06.png) no-repeat left top; z-index:300}
+.mSection01 .obj07 {left:0px; top:855px; width:791px; height:315px; background:url(../images/index/mSection01_obj07.png) no-repeat left top; z-index:300}
+.mSection01 .obj08 {left:0px; top:0px; width:1433px; height:954px; background:url(../images/index/mSection01_obj08.png) no-repeat left top; z-index:200}
+
+/* section02 */
+.mSection02 .arrow {position:absolute; left:270px; top:10px; width:49px; height:56px; z-index:1500 }
+.mSection02 .tit {left:291px; top:257px; z-index:1500}
+.mSection02 .txt {left:297px; top:464px; z-index:1450}
+.mSection02 .obj01 {left:780px; top:-60px; width:258px; height:254px; background:url(../images/index/mSection02_obj01.png) no-repeat left top; z-index:1100}
+.mSection02 .obj02 {left:690px; top:15px; width:258px; height:254px; background:url(../images/index/mSection02_obj02.png) no-repeat left top; z-index:1200}
+.mSection02 .obj03 {left:630px; top:203px; width:599px; height:475px; background:url(../images/index/mSection02_obj03.png) no-repeat left top; z-index:1400}
+.mSection02 .obj04 {left:505px; top:624px; width:536px; height:390px; background:url(../images/index/mSection02_obj05.png) no-repeat left top; z-index:1300}
+.mSection02 .obj05 {left:610px; top:777px; width:593px; height:425px; background:url(../images/index/mSection02_obj04.png) no-repeat left top; z-index:1350}
+
+/* section03 */
+.mSection03 .arrow {position:absolute; left:380px; top:10px; width:49px; height:56px; z-index:2500 }
+.mSection03 .tit {left:634px; top:158px; z-index:2500}
+.mSection03 .txt {left:634px; top:328px; z-index:2400}
+.mSection03 .obj01 {left:558px; top:-275px; width:1087px; height:1030px; background:url(../images/index/mSection03_obj01.png) no-repeat left top; z-index:2300}
+.mSection03_arrow { margin-top:5px; }

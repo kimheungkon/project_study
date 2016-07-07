@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>01_tab_menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<style>
+/* common */
+html{width:100%;height:100%;overflow-y:scroll}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0px;padding:0px;font:inherit;vertical-align:baseline;}
+body{font-size:12px;font-family:Dotum,Arial;color:#74767a;line-height: 120%;}
+a,a:link,a:visited{color:#74767a;text-decoration:none}
+ul,ol{list-style:none}
+table,fieldset,th,td,img{border:none}
+img,input,select{vertical-align:middle}
+
+#wrap {width:939px; margin-left:400px;}
+#wrap ul {margin-top:140px;}
+#wrap ul:after {content:""; display:block; clear:both;}
+#wrap ul li {float:left; overflow:hidden; height:25px; margin-right:6px; }
+#wrap ul li:last-child { margin-right:0px; }
+#wrap ul li img {margin-top:0x}
+#wrap ul li .on img {margin-top:-25px}
+
+#content {position:relative; width:487px; height:323px;}
+#content div {position:absolute; left:0px; top:0px; display:none; width:455px; height:291px; margin-top:10px; background:#55aaea; padding:16px;}
+
+
+</style>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var tab = $('#wrap #tab > li');  // 이벤트를 설정할 엘리먼트를 셀렉트한다.
+		var content = $('#content > div');   // 클릭시 보여지는 컨텐츠영역을 셀렉트 한다.
+		tab.on('click', function(e){   // 클릭 이벤트 생성
+			e.preventDefault();   // 클릭시 브라우져 기능이 동작하지 않도록 해준다.
+			
+			var tg = $(this);  // 클릭한 엘리먼트 타겟을 this를 통해서 접근
+			var tc = tg.find('> a');  // this의 a태그 자식엘리먼트를 셀렉트 
+			
+			tab.find('> a').removeClass('on');  // 전체 메뉴 엘리먼트에서 클래스 on을 삭제.. 모두다 비활성화 되도록 하기 위함
+			
+			tc.addClass('on'); // 클릭된 엘리먼트에만 on클래스를 넣어준다.
+			
+			i = tg.index(); // 클릭한 엘리먼트의 index번호를 변수에 할당
+			
+			content.css('display', 'none');    //   모든 컨텐츠 엘리먼트를 안보이도록한다. 모두다 안보이도록 하고 보여줄 엘리먼트를 그다음 처리하는게 개발하기 쉽다.
+			content.eq(i).css('display', 'block');   //  index번호에 맞는 엘리먼트의 display속성을 block으로 변경
+		});
+	});
+</script>
+</head>
+
+<body>
+	
+	<div id="wrap">
+		<!-- tabmenu -->
+		<ul id="tab">
+			<li>
+				<a href="#gallery" class="on"><img src="img/tab01.png" alt="Gallery" />
+				</a>
+			</li>
+			<li><a href="#cafe"><img src="img/tab02.png" alt="Cafe" /></a></li>
+			<li><a href="#lounge"><img src="img/tab03.png" alt="Lounge" /></a></li>
+			<li><a href="#service"><img src="img/tab04.png" alt="Service" /></a></li>
+		</ul>
+		<!-- //tabmenu -->
+		
+		<!-- tab content -->
+		<div id="content">
+			<div style="display:block;">
+				<img src='img/img01.png' alt="img1" />
+			</div>
+			<div>
+				<img src='img/img02.png' alt="img2" />
+			</div>
+			<div>
+				<img src='img/img03.png' alt="img3" />
+			</div>
+			<div>
+				<img src='img/img04.png' alt="img4" />
+			</div>
+		</div>
+		<!-- //tab content -->
+
+	</div>
+
+</body>
+</html>

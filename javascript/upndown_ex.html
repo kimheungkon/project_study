@@ -5,32 +5,65 @@
     <title>Document</title>
     <script type="text/javascript">
 
-    var coin = 10;
-    var x = Math.floor(Math.random() * 100);
+/*
+up and down게임
+1.숫자가 램덤으로 있다
+랜덤의 수는 0~100의 수중에 아무 숫자나 한가지가 나온다.
+x=랜덤수
+2.사용자가 숫자를 맞춘다.
+사용자가 입력한 숫자보다 x의 수가 높으면 '높다'라고 메세지를 보낸다.
+그후 다시 한번 숫자를 입력한다.
+사용자가 입력한 숫자보다 x의 수가 낮으면 '낮다'라고 메세지를 보낸다.
+그후 다시 한번 숫자를 입력한다.
+x의 수를 사용자가 맞추면 성공이라는 메세지를 출력한 후 게임이 종료된다.
+사용자가 숫자를 입력할 수 있는 총 횟수는 5번이다.
+사용자가 5번 이내에 성공하지 못하면 '꺼져'라는 메세지를 보내고 게임이 끝난다.
+*/
 
 
-    for(i=0; i < coin; i++){
-        var values = prompt("숫자를 맞춰보세요");
+    var ran = Math.floor(Math.random() * 100)
+    console.log(ran)
 
-            if(i < coin){
-                if(values > x){
-                    alert("그 숫자보다 작습니다");
-                }
-                else if(values < x){
-                    alert("그 숫자보다 큽니다");
-                }
-                else if(values == x){
-                    alert("정답입니다");
-                    break;
-                }
-            }
-            if(i == coin-1){
-                alert("다음 기회에 도전하세요");
-                
-            }
-    
+    for(i=0; i<5; i++){
+        var user = prompt("숫자를 맞춰 보세요");
+        console.log(user)
+     
+        if(ran > user){
+            alert("그것보다 커")
+        }else if(ran < user){
+            alert("그것보다 작아")
+        }else if(ran == user){
+            alert("정답입니다")
+        }
+
     }
-        console.log(values)
+        
+        
+    // var coin = 10;
+
+
+    // for(i=0; i < coin; i++){
+    //     var values = prompt("숫자를 맞춰보세요");
+
+    //         if(i < coin){
+    //             if(values > x){
+    //                 alert("그 숫자보다 작습니다");
+    //             }
+    //             else if(values < x){
+    //                 alert("그 숫자보다 큽니다");
+    //             }
+    //             else if(values == x){
+    //                 alert("정답입니다");
+    //                 break;
+    //             }
+    //         }
+    //         if(i == coin-1){
+    //             alert("다음 기회에 도전하세요");
+                
+    //         }
+    
+    // }
+    //     console.log(values)
 
 
 

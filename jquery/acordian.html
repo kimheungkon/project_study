@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{list-style:none;}
+        
+        .menu{border:1px #F00 solid; width:130px; margin:0 auto;}
+        .menu li{border:1px #F00 solid;}
+        .menu li div{display:none}
+    </style>
+    
+    <script>
+        
+        $(function(){
+            
+            
+            
+            $('.menu li').click(function(){
+              
+              if(!$(this).is('.on')){
+                  $(this).addClass('on').children('div').show()
+              }else if($(this).is('.on')){
+                  $(this).removeClass('on').children('div').hide()
+              }
+              
+              
+              
+                
+                // if(button == false){
+                //     $(this).children('div').show()
+                //     button = true;
+                // }else if(button == true){
+                //     $(this).children('div').hide()
+                //     button = false;
+                // }
+                
+                //마우스 오버시
+                //$(this).children('div')
+             })
+             
+            
+            
+            
+        })
+        
+        
+    </script>
+    
+</head>
+<body>
+    
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="../images/diamond.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="../images/map-location.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="../images/microphone.png" />
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">menu</a>
+                <div>
+                    <img src="../images/equal.png" />
+                </div>
+            </li>
+         </ul>
+        
+    </div>
+    
+    
+    
+</body>
+</html>

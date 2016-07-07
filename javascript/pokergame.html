@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+    //카드모양 배열
+    var cardtype = ["♥","◆","♠","♣"];
+    //카드담을 공간 배열
+    var carbox = [];
+    function reset(){
+       
+       carbox = [];
+       
+        //카드담을공간에 카드를 종류별로 담기
+        
+        for(var i=0 in cardtype){
+            for(j=0; j<13; j++){
+                
+                if(j==0){
+                    carbox.push(cardtype[i]+"A");
+                }else if(j==10){
+                    carbox.push(cardtype[i]+"J");
+                }else if(j==11){
+                    carbox.push(cardtype[i]+"Q");
+                }else if(j==12){
+                    carbox.push(cardtype[i]+"K");
+                }else{
+                    carbox.push(cardtype[i]+(j+1))
+                }
+            }
+        }
+        
+        console.log(carbox)
+        
+        //카드 나눠주기기능 
+        
+       
+        
+    }
+    
+    function die(){
+        reset()
+        user = []
+    }
+    
+   
+   function start(){
+       var i = 0
+       while( i < 3){
+        addcard()    
+        i++
+       }
+   }
+   
+   
+   
+    var user = [];
+        function addcard(){
+            
+            //랜덤으로 수를 발생킨다.(carbox 갯수 범위)
+            
+            var rans = Math.floor(Math.random() * carbox.length);
+            //carbox에서 랜덤 수의 카드를 user 배열에 추가한다
+            
+            user.push(carbox[rans])
+            carbox.splice(rans,1)
+        
+            console.log(user)
+            //carbox에서 랜덤수의 카드를 제거한다
+            
+            
+            
+        }
+   
+    
+    </script>
+</head>
+<body>
+ <button onclick="reset()">카드정리</button>
+ <button onclick="start()">게임시작</button>
+ <button onclick="addcard()">콜</button>
+  <button onclick="die()">다이</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

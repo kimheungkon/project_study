@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>함수를이용하여_홀수짝수_알아내기</title>
+		<script type="text/javascript">
+			function checkEvenOdd(num){
+				var sum = num % 2;
+				var msg;
+				if(sum == 0){
+					msg = num + "은(는) 짝수 입니다.";
+				} else if(sum == 1){
+					msg = num + "은(는) 홀수 입니다.";
+				}
+				return msg;
+			}
+			var msg = checkEvenOdd(4);
+			document.write(msg);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

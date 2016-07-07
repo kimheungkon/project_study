@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>04_off_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0;  }
+			body { margin-left:300px; }
+			.box { width:150px; height:150px; border:2px solid blue;}
+			.box.over { background-color: red; }
+			.box.out { background-color: green; }
+			.box.down { background-color: blue; }
+			.box.up { background-color: pink; }
+			.box.click { background-color: brown; }
+			.box > p { padding:30px; color:white; }
+			#nav { margin:20px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var box = $('#wrapper > .box');
+				$('#wrapper').on({
+					mouseover:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('box over');
+						tg.find('> p').text('mouseover');
+					},
+					mouseout:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('box out');
+						tg.find('> p').text('mouseout');
+					},
+					click:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('box click');
+						tg.find('> p').text('click');
+					}
+				}, '.box');
+				
+				$('#nav > :input:eq(0)').bind('click', function(){
+					$('#wrapper').append(box.eq(0).clone());
+				});
+				
+				$('#nav > :input:eq(1)').bind('click', function(){
+					
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+	<div id="nav">
+		<input type="button" value="box추가" />
+		<input type="button" value="이벤트제거" />
+	</div>
+	<div id="wrapper">
+		<div class="box out">
+			<p>mouseout</p>
+		</div>
+		<div class="box out">
+			<p>mouseout</p>
+		</div>
+	</div>
+	</body>
+</html>

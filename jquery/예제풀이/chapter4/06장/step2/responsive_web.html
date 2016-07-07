@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>responsive_web</title>
+		<style>
+			* { margin:0; padding:0; }
+			.box { border:2px solid #1E2327; position:absolute; }
+		</style>
+		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var maxSize = 30;
+				var body = $('body');
+				
+				for(var i=0; i<maxSize; i++){
+					var box = '<div class="box">';
+					body.append(box);
+				}
+				
+				var box = $('.box');
+				box.each(function(i){
+					var tg = $(this);
+					var boxColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+					var boxHeight = parseInt(Math.random() * 50 + 100);
+					var boxWidth = parseInt(Math.random() * 50 + 50);
+				
+					tg.css({
+						width:boxWidth,
+						height:boxHeight,
+						backgroundColor:boxColor
+					});
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

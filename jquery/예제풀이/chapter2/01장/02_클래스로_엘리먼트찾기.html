@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>02_클래스로_엘리먼트찾기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			div { border:1px solid green; margin:5px; }
+			li { border:1px solid blue; list-style: none; margin:5px;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('.elements').css('color', 'red');
+			});
+		</script>
+	</head>
+	<body>
+		<span>'elements'클래스를 선택하여 해당 엘리먼트의 색을 바꿔 주세요.</span>
+		<div>
+			1
+			<div>
+				1-1
+			</div>
+		</div>
+		<div>
+			2
+			<div>
+				2-1
+				<div>
+					2-1-1
+					<ul>
+						<li>2-1-1-1</li>
+						<li class="elements">2-1-1-2 (  이부분을 고쳐주세요 )</li>
+						<li class="elements">2-1-1-3 (  이부분을 고쳐주세요 )</li> 
+						<li>2-1-1-4</li>
+						<li>2-1-1-5</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				2-2
+				<ul>
+					<li>2-2-1</li>
+					<li>2-2-2</li>
+					<li>2-2-3</li>
+					<li>2-2-4</li>
+					<li>2-2-5</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

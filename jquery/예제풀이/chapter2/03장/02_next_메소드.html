@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>02_next_메소드.html</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			#wrapper > ul > li { margin:5px; list-style: none; border: 1px solid green; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var el = $('#wrapper > ul > .first').next();
+				el.css('color','red');
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>next() 메소드를 사용하여 1번 엘리먼트의 바로 다음 형제 엘리먼트의 글자색을 변경해 주세요.</span>
+		<div id="wrapper">
+			<ul>
+				<li class="first">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

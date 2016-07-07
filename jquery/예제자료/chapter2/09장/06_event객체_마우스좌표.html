@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>06_event객체_마우스좌표</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			#wrapper { width:3000px; height:3000px; }
+			#box { width:400px; height:400px; border:2px solid blue; margin-left:300px; margin-top:100px; position:fixed; }
+			#box > p { margin-top:60px; margin-left:150px; }
+			p > span { margin:0; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div id="box">
+				<p>
+					clientX = <span id="clientx">0</span><br>
+					clientY = <span id="clienty">0</span><br>
+					offsetX = <span id="offsetx">0</span><br>
+					offsetY = <span id="offsety">0</span><br>
+					pageX = <span id="pagex">0</span><br>
+					pageY = <span id="pagey">0</span><br>
+					screenX = <span id="screenx">0</span><br>
+					screenY = <span id="screeny">0</span>
+				</p>
+			</div>
+		</div>
+		<span>Event Property의 <br> cliendX, clientY와<br> offsetX, offsetY와<br> pageX, pageY와<br> screenX, screenY의 비교</span>
+	</body>
+</html>

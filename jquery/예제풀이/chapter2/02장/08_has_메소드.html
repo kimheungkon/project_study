@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>09_has_method</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			#wrapper > ul > li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper > ul > li > ul > li  { margin:5px; list-style: none; border: 1px solid blue; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('#wrapper > ul > li')
+				.has('ul')
+				.css('color', 'red');
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>has() 메서드를 사용해서 li엘리먼트중 자식으로 ul엘리먼트를 가지고 있는 엘리먼트를 찾아서 색을 바꿔 주세요.</span>
+		<div id="wrapper">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>
+					4
+					<ul>
+						<li>4-1</li>
+						<li>4-2</li>
+						<li>4-3</li>
+						<li>4-4</li>
+					</ul>
+				</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

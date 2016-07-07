@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='ko' lang='ko'>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'/>
+<title>01_1depth_menu</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+<script>
+$(function(){
+	var menu = $('#nav > li');
+	menu.hover(function(){
+		var tg = $(this);
+		var onImg = tg.find('.text_image > .on');
+		var offImg = tg.find('.text_image > .off');
+		
+		onImg.css('display', 'block');
+		offImg.css('display', 'none');
+	}, function(){
+		var tg = $(this);
+		var onImg = tg.find('.text_image > .on');
+		var offImg = tg.find('.text_image > .off');
+		
+		onImg.css('display', 'none');
+		offImg.css('display', 'block');
+	});
+});
+</script>
+</head>
+<body>
+
+	<div id="wrap">
+		<ul id="nav">
+			<li>
+				<div class="menu_image"><a href="#"><img src="img/bgMenu01.gif" alt="대표상품" /></a></div>
+				<div class="text_image">
+					<div class="off"><a href="#"><img src="img/menu01.gif" alt="대표상품" /></a></div>
+					<div class="on"><a href="#"><img src="img/menu01_on.gif" alt="대표상품" /></a></div>
+				</div>
+			</li>
+			<li>
+				<div class="menu_image"><a href="#"><img src="img/bgMenu02.gif" alt="상장상품" /></a></div>
+				<div class="text_image">
+					<div class="off"><a href="#"><img src="img/menu02.gif" alt="상장상품" /></a></div>
+					<div class="on"><a href="#"><img src="img/menu02_on.gif" alt="상장상품" /></a></div>
+				</div>
+			</li>
+			<li>
+				<div class="menu_image"><a href="#"><img src="img/bgMenu03.gif" alt="금융상품" /></a></div>
+				<div class="text_image">
+					<div class="off"><a href="#"><img src="img/menu03.gif" alt="금융상품" /></a></div>
+					<div class="on"><a href="#"><img src="img/menu03_on.gif" alt="금융상품" /></a></div>
+				</div>
+			</li>
+			<li>
+				<div class="menu_image"><a href="#"><img src="img/bgMenu04.gif" alt="추천상품" /></a></div>
+				<div class="text_image">
+					<div class="off"><a href="#"><img src="img/menu04.gif" alt="추천상품" /></a></div>
+					<div class="on"><a href="#"><img src="img/menu04_on.gif" alt="추천상품" /></a></div>
+				</div>
+			</li>
+		</ul>
+	
+	</div>
+
+</body>
+</html>

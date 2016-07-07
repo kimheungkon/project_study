@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+    html,body{height:100%;}
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+        .nav{height:40px; background-color: #000; text-align:center; width:100%; position:fixed;}
+        .nav li {display:inline-block;}
+        .nav li.on a{color:#F00;}
+        .nav a{color:#FFF; text-decoration:none; line-height:40px; font-size:20px;}
+        .section,.section>div {height:100%; -webkit-background-size: cover ;
+        background-size: cover ; background-position: 50%;}
+        .section>div:nth-child(1){background-image:url('../images/i01.jpg');}
+        .section>div:nth-child(2){background-image:url('../images/i02.jpg')}
+        .section>div:nth-child(3){background-image:url('../images/i03.jpg')}
+        .section>div:nth-child(4){background-image:url('../images/i04.jpg');}
+    </style>
+    
+    <script>
+        
+        $(function(){
+            
+            var spot = []
+            var aa = []
+                $('.section>div').each(function(){
+                    
+                    spot.push($(this).offset().top)
+                    aa.push($(this).offset().top + $(this).height())
+                })
+                
+                
+                
+                $(window).scroll(function(){
+                    var sct = $(this).scrollTop();
+                    
+                    $('.section>div').each(function(i){
+                        
+                        if(sct >= spot[i] && sct < aa[i]){
+                            $('.nav li').eq(i).addClass('on');
+                        }else{
+                           $('.nav li').eq(i).removeClass('on');
+                        }
+                    })
+                })
+            
+            
+            
+            
+            
+            
+            
+            
+           $('.nav a').click(function(){
+               
+               
+                var idx = $(this).parent().index();
+                 $('body,html').animate({
+                        scrollTop:spot[idx]
+                    })
+                    
+                   return false;  
+                    
+               /* 
+               
+               ////////////////////////////////////////
+               
+               var target = $(this).attr('href');
+               
+               $('body,html').animate({
+                   scrollTop:$(target).offset().top
+               })
+               return false;
+              
+               ////////////////////////////////////
+               
+               var aa = location.hash;
+                $('body,html').animate({
+                   scrollTop:$(aa).offset().top
+               });
+            */
+              
+           })
+           
+        })
+        
+        
+    </script>
+    
+</head>
+<body>
+    
+    <div class="nav">
+        <ul>
+            <li class="on"><a href="#page1">text</a></li>
+            <li><a href="#page2">text</a></li>
+            <li><a href="#page3">text</a></li>
+            <li><a href="#page4">text</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <div id="page1"></div>
+        <div id="page2"></div>
+        <div id="page3"></div>
+        <div id="page4"></div>
+       
+        
+    </div>
+    
+</body>
+</html>

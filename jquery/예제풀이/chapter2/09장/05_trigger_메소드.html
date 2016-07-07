@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>05_trigger_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body { margin-left:300px; }
+			#box { width:300px; height:300px; border:2px solid blue; margin-top:30px; }
+			#box.over { background-color: red; }
+			#box.out { background-color: green; }
+			#box.down { background-color: blue; }
+			#box.up { background-color: pink; }
+			#box.click { background-color: brown; }
+			#box > p { padding:30px; color:white; }
+			#trigger { padding:10px; width:200px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var box = $('#box');
+				box.bind({
+					mouseover:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('over');
+						tg.find('> p').text('mouseover');
+					},
+					mouseout:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('out');
+						tg.find('> p').text('mouseout');
+					},
+					click:function(){
+						var tg = $(this);
+						tg.removeClass().addClass('click');
+						tg.find('> p').text('click');
+					}
+				});
+				
+				var nav = $('#nav');
+				nav.find('> .mouseover').bind('click', function(){
+					box.trigger('mouseover', $(this));
+				});
+				
+				nav.find('> .mouseout').bind('click', function(){
+					box.trigger('mouseout', $(this));
+				});
+				
+				nav.find('> .click').bind('click', function(){
+					box.click();
+				});
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+	<div id="nav">
+		<span>trigger() 메서드</span><br><br>
+		<input class="mouseover" type="button" value="mouseover" />
+		<input class="mouseout" type="button" value="mouseout" />
+		<input class="click" type="button" value="click" />
+	</div>
+	<div id="box" class="out">
+		<p>mouseout</p>
+	</div>
+	</body>
+</html>

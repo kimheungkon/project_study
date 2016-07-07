@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_너비와높이_읽어오기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body > span { color:red; font-size: 29px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper { border: 5px solid blue; padding:30px; margin:20px; font-size:20px;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+				$(window).resize(function(){
+					
+				});
+				
+				$(window).trigger('resize');
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게 다른지 확인해 보세요.</span>
+		<div id="wrapper">
+			<span>박스의 width = </span><span id="width">0</span><br>
+			<span>박스의 height = </span><span id="height">0</span><br>
+			<span>박스의 innerWidth = </span><span id="innerWidth">0</span><br>
+			<span>박스의 innerHeight = </span><span id="innerHeight">0</span><br>
+			<span>박스의 outerWidth = </span><span id="outerWidth">0</span><br>
+			<span>박스의 outerHeight = </span><span id="outerHeight">0</span>
+		</div>
+	</body>
+</html>

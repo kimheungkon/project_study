@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+*{margin:0; padding:0;}
+ul{list-style:none}
+.slide{width:500px; height:300px; border:1px #F00 solid; position:relative; margin:0 auto; overflow:hidden;}
+.slide button{position:absolute; top:50%; z-index:1;}
+.slide button.next{right:0px;}
+.slide button.prev{left:0px;}
+.slide ul{text-align:center;}
+.slide li{display:inline-block;}
+.slide li a{display:block; width: 20px; height:20px; position:relative; z-index: 1; border:1px #F00 solid;  color:#000; top:280px; }
+.slide li img{width:100%; position:absolute; left:0; top:0; display:none;}
+.slide li:first-child img{display:block;}
+.slide li.on a{background-color:#F00;}
+</style>
+<script type="text/javascript">
+
+    $(function(){                
+     
+        var idx = 0;
+     
+        function movement(start,end,selector){
+            
+            $('.slide li').eq(selector).children('img').css({
+                'display':'block',
+                'left':start
+            }).stop().animate({
+                left:end
+            }).parent().addClass('on').siblings().removeClass('on')
+            
+            if(selector == $('.slide li').length){
+                idx = 0
+                movement("100%","0",idx)
+            }else if(selector < 0){
+                idx = $('.slide li').length -1;
+                movement("-100%","0",idx)
+            }
+            
+         }
+     
+        $('button.next').click(function(){
+            movement("0","-100%",idx);
+            idx ++
+            movement("100%","0",idx);
+        })
+        
+        $('button.prev').click(function(){
+            movement("0","100%",idx);
+            idx --
+            movement("-100%","0",idx);
+        })
+        
+        $('.slide li a').click(function(){
+            idx = $(this).parent().index()
+            var his = $('.slide li.on').index();
+             
+             movement("0","-100%",his);
+             movement("100%","0",idx);
+            
+             
+             return false;
+            
+            
+        })
+     
+     
+     
+     
+     
+    })
+    
+    
+    
+</script>
+
+</head>
+<body>
+    
+    <div class="slide">
+        
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/i01.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/i02.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/i03.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

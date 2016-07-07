@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>13_has_필터셀렉터</title>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			div { border:1px solid green; margin:5px; }
+			li { border:1px solid blue; list-style: none; margin:5px; }
+		</style>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var el = $('#el > li:has(p)');
+				el.css('color','red');
+			});
+		</script>
+	</head>
+	<body>
+		<span>아이디가 el인 엘리먼트의 자식엘리먼트중 :has 필터셀렉터를 이용하여 p태그를 포함하는 엘리먼트를 선택해 글자색을 변경해 주세요.</span>
+		<div>
+			<ul id="el">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li><p>4</p></li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+	</body>
+</html>

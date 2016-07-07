@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_default_droppable</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<style>
+			body { margin-top:120px; margin-left: 250px;}
+			#draggable { border:1px solid red; width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+		    #droppable { border:1px solid red;  width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+		    .drop { border:1px solid blue !important; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('#draggable').draggable();
+			});
+		</script>
+	</head>
+	<body>
+	<div id="draggable">
+		<p>Drag Me</p>
+	</div>
+	<div id="droppable">
+		<p>Drop Me</p>
+	</div>
+	</body>
+</html>

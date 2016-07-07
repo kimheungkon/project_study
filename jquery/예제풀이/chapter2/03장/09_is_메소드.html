@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>09_is_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var el = $('#el > ul > li').is('#nextEl');
+				if(el){
+					alert('존재 합니다.');
+				} else {
+					alert('존재 하지 않습니다.');
+				}
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>is() 메서드를 사용하여 id가 "el"인 엘리먼트의 확장집합중 id가 "nextEl"인 엘리먼트가 존재하는지 체크하고 존재한다면 alert창을 띄워주세요.</span>
+		<div id="wrapper">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3
+					<ul>
+						<li>3-1</li>
+						<li>3-2</li>
+						<li id="el">3-3
+							<ul>
+								<li>3-3-1</li>
+								<li>3-3-2</li>
+								<li id="nextEl">3-3-3</li>
+								<li>3-3-4</li>
+								<li>3-3-5</li>
+							</ul>
+						</li>
+						<li>3-4</li>
+					</ul>
+				</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

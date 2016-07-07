@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_html콘텐츠_읽고_설정하기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body > span { color:red; font-size:30px; }
+			li { margin:5px; list-style:none; border:1px solid green; }
+			#hidden { display:none; }
+			#wrapper { border:1px solid blue; padding:20px; margin:20px; font-size:20px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>id가 "hidden"인 엘리먼트가 style속성 "display" 값이 "none"으로 설정 되어 있어요. 그 엘리먼트의 HTML콘텐츠를 읽어서 내용을 바꿔주세요.</span>
+	<div id="wrapper">
+		<span>이곳의 내용을 바꿔 주세요.</span>
+	</div>
+	<div id="hidden">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	</body>
+</html>

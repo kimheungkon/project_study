@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>04_draggable_events</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<style>
+			#draggable { width: 150px; height: 150px; padding: 0.5em; border: 1px solid red; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var start = $('#start');
+				var drag = $('#drag');
+				var stop = $('#stop');
+				
+				$('#draggable').draggable({
+					start: function() {
+						$(this).text('start');
+						updateCount(start);
+				    },
+				    drag: function() {
+				    	$(this).text('drag');
+						updateCount(drag);
+				    },
+				    stop: function() {
+				    	$(this).text('stop');
+						updateCount(stop);
+				    }
+				});
+				
+				function updateCount(tg){
+					var cnt = parseInt(tg.find('> span').text()) + 1;
+					tg.find('> span').text(cnt);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="count_area">
+			<div id="start">
+				start = <span>0</span>
+			</div>
+			<div id="drag">
+				drag = <span>0</span>
+			</div>
+			<div id="stop">
+				stop = <span>0</span>
+			</div>
+		</div>
+		<div id="draggable" class="ui-widget-content">
+		  <p>Drag me around</p>
+		</div>
+	</body>
+</html>

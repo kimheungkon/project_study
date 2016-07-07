@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_CSS스타일_적용해_보기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper {	margin:20px;	}
+			#el { margin-top:0px; background-color: #efefef; padding:15px; color:blue;	font-size:24px; }
+			#controller { margin:0; }
+			#input { height:30px; }
+			#input select { float: left; margin-right:5px; }
+			#input input { float:left; margin-right:5px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var input = $('#input');
+				var select = input.children('.css_prop');
+				var inputText = input.children('.css_prop_value');
+				var button = input.children('.button');
+				var contents = $('#el');
+				
+				select.change(function(){
+					var cssTypeName = $(this).val();
+					if(cssTypeName != ''){
+						inputText.val(contents.css(cssTypeName));
+					}
+				});
+				
+				button.click(function(){
+					var cssTypeName = select.val();
+					contents.css(cssTypeName, inputText.val());
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div id="controller">
+				<div id="input">
+					<select class="css_prop">
+						<option value="">CSS속성을 선택해 주세요.</option>
+						<option value="fontSize">font-size</option>
+						<option value="color">color</option>
+						<option value="backgroundColor">background-color</option>
+						<option value="margin">margin</option>
+						<option value="padding">padding</option>
+					</select>
+					<input class="css_prop_value" type="text" value="" />
+					<input class="button" type="button" value="적용"/>
+				</div>
+			</div>
+			<div id="el">
+				이곳에 CSS 스타일을 적용시켜 주세요.
+			</div>
+		</div>
+	</body>
+</html>

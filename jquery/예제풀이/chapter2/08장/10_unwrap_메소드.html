@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>11_unwrap_method</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrap { border:1px solid red; }
+		</style>
+		<script>
+	$(document).ready(function(){
+		$('#wrap > ul').unwrap();
+	});
+		</script>
+	</head>
+	
+	<body>
+		<span>아이디가 wrap인 엘리먼트의 자식엘리먼트를 찾아 unwrap()메서드를 호출하여 싸고 있는 부모 엘리먼트를 제거해 주세요.</span>
+	<div id="wrapper">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3
+				<div id="wrap">
+					<ul>
+						<li>3-1</li>
+						<li>3-2</li>
+						<li>3-3</li>
+						<li>3-4</li>
+						<li>3-5</li>
+					</ul>
+				</div>
+			</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	</body>
+</html>

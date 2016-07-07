@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>04_fadeTo_메소드</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body { margin-top:150px; margin-left:500px; }
+			#wrapper { margin-top:20px; }
+			#box { width:300px; height:300px; background-color:red; border:2px solid blue; }
+			input { width:100px; height:50px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				var control = $('#control');
+				var fadeToHalfBtn = control.find('> input:eq(0)');
+				var fadeToFullBtn = control.find('> input:eq(1)');
+				var box = $('#wrapper #box');
+				
+				fadeToHalfBtn.click(function(){
+					box.fadeTo(600, 0.5);
+				});
+				
+				fadeToFullBtn.click(function(){
+					box.fadeTo(600, 1);
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="control">
+			<input type="button" value="fadeToHalf" />
+			<input type="button" value="fadeToFull" />
+		</div>
+		<div id="wrapper">
+			<div id="box">
+				
+			</div>
+		</div>
+	</body>
+</html>

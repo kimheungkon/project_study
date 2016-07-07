@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+*{margin:0; padding:0;}
+ul{list-style:none}
+.slide{width:500px; height:300px; border:1px #F00 solid; position:relative; margin:0 auto; overflow:hidden;}
+.slide button{position:absolute; top:50%; z-index:1;}
+.slide button.next{right:0px;}
+.slide button.prev{left:0px;}
+.slide ul{text-align:center;}
+.slide li{display:inline-block;}
+.slide li a{display:block; width: 20px; height:20px; position:relative; z-index: 1; border:1px #F00 solid;  color:#000; top:280px; }
+.slide li img{width:100%; height:300px; position:absolute; left:0; top:0; display:none;}
+.slide li:first-child img{display:block;}
+.slide li.on a{background-color:#F00;}
+</style>
+<script type="text/javascript">
+    $(function(){                
+     
+        var idxarr = [];
+        $('body .slide').each(function(i,e){
+            idxarr.push(0);
+            console.log(idxarr)
+        })
+         
+         //$('body .slide').eq(target) : 모든 슬라이드에서 내가 원하는(target)을 선택한뒤에 
+         //.find('li') : li들을 찾고 on클래스를 없애고,
+         //.eq(idx).children('img').css({........ : 그중에서 원하는 li 선택하고, on클래스를 부여한다. 그안에 있는  img를 이동한다.
+         
+         
+        function movement(start,end,selector,target){
+            $('body .slide').eq(target).find('li').removeClass('on').eq(selector)
+                .addClass('on').children('img').css({
+                'display':'block',
+                'left':start
+            }).stop().animate({
+                 left:end
+            })
+             
+            if(idx == $('.slide').eq(selectorIdx).find('li').length){
+                idxarr[selectorIdx] = 0
+                movement('100%','0',idxarr[selectorIdx],selectorIdx)
+            }else if(idx < 0){
+                idxarr[selectorIdx] = $('.slide:eq('+selectorIdx+') li').length -1;
+                movement('-100%','0',idxarr[selectorIdx],selectorIdx)
+            }
+        }
+         
+         
+         
+        $('.slide .next').click(function(){
+             
+            selectorIdx = $(this).parent().index();
+            
+            movement('0','-100%',idxarr[selectorIdx],selectorIdx);
+            
+            idxarr[selectorIdx]++;
+            
+            movement('100%','0',idxarr[selectorIdx],selectorIdx);
+            console.log(idxarr)
+            console.log(selectorIdx)
+         })
+     
+     
+     
+        $('.slide .prev').click(function(){
+            selectorIdx = $(this).parent().index();
+            movement('0','100%',idxarr[selectorIdx],selectorIdx);
+            idxarr[selectorIdx]--;
+            movement('-100%','0',idxarr[selectorIdx],selectorIdx);            
+        })
+     
+
+        // $('.slide .li a').click(function(){
+        //     var tar = $(this).parent('.slide').index();
+        //     idxarr[tar] = $(this).parent().index();
+        //     var his = $(this).parent().filter('.on').index();
+            
+        //     if(his < idxarr[tar]){
+        //         movement('100%','0', idxarr[tar],tar)
+        //     }
+        //     console.log(tar)
+        //     console.log(idxarr[tar])
+        //     console.log(his)
+            
+            
+            
+        //     return false
+            
+        // })
+
+
+
+
+
+     
+    })
+    
+    
+    
+</script>
+
+</head>
+<body>
+    
+    <div class="slide">
+        
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/i01.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/i02.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/i03.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="slide">
+        
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/i01.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/i02.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/i03.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+   
+    <div class="slide">
+        
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/i01.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/i02.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/i03.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="slide">
+        
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/i01.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/i02.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/i03.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/i04.jpg">
+                </li>
+                
+                <li>
+                    <a href="">5</a>
+                    <img src="../images/i05.jpg">
+                </li>
+                <li>
+                    <a href="">6</a>
+                    <img src="../images/i06.jpg">
+                </li>
+                <li>
+                    <a href="">7</a>
+                    <img src="../images/i07.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+</body>
+</html>

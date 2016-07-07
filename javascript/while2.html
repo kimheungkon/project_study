@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+    
+    var member = [];
+    var tt;
+    function addUser(){
+        
+        var user = prompt("사용자수를 입력하세요")
+        
+        var i=0;
+        while(i < user){
+             var userscore =  prompt("사용자 점수를 입력하세요")
+        
+             member.push(Number(userscore))    
+            i++
+        }
+        
+      tt =  avg(member)
+     }
+     
+     function avg(x){
+         
+         var total = 0;
+         
+        for(var i=0 in x){
+            total += x[i]    
+        }
+        
+       return total / x.length
+        
+     }
+     
+     
+     
+    
+    </script>
+</head>
+<body>
+<button onclick="addUser();">사용자 점수입력</button>
+<button onclick="alert(tt);">평균출력</button>
+<button onclick=";">점수 계산 </button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

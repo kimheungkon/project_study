@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>01_yahoo_weather_api</title>
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend { margin: 0px; padding: 0px; border: 0px;}
+body {margin:0px auto; font-family:돋움, Dotum; font-size:12px; text-decoration:none; list-style:none;}
+
+#wrap { width:896px; height:192px; background-image: url(img/bgsky.jpg); }
+#header{ }
+.afterDay {float: left; width: 357px; height:183px; text-align:right; }
+.afterDay .today_text {float:left; font-size:34px; padding-left:139px; padding-top:20px; color:white;}
+.weather_icon {float: left; padding-top: 8px; padding-left: 5px; }
+
+.dateweek {overflow:hidden; float:left; padding-top:56px; padding-left:17px;}
+.dateweek .datecontent { float:left; font-size: 14px; text-align: center; letter-spacing: 1px; color: white; }
+.dateweek .cloudsmall { float:left; padding-left: 5px; text-align: left;  width: 36px; height: 35px;}
+.dateweek .cloudsmall img { width:100%; height:100%;}
+.dateweek .number { float:left; padding-left:8px; font-size: 14px; text-align: center; letter-spacing: 2px; color: white;}
+.datecontent02 { float:left;  padding-left: 15px;font-size: 14px; text-align: center; letter-spacing: 1px; color: white; }
+.cloudsmall02 { float:left;  padding-left: 5px;text-align: left; width: 36px; height: 35px;}
+.cloudsmall02 img { width:100%; height:100%;}
+.number02 { float:left; padding-left:8px; font-size: 14px; text-align: center; letter-spacing: 2px; color: white;}
+
+.today { float: right; height: 180px; padding-top: 6px; } 
+.temp { position:relative; float:left; *width:235px; letter-spacing: -21px; line-height: 89%; font-size: 220px; color: white; padding-top:12px;}
+.date {float: right; padding-top: 26px; width:180px; padding-left: 98px; letter-spacing: -1px; font-size: 24px;color: white; }
+.degspan {position: absolute; font-family:arial; font-size: 122px; right: -53px; top: -34px;}
+</style> 
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="afterDay">
+				<div class="today_text">
+					Today
+				</div>
+				<div class="weather_icon">
+					<img src="img/iconbig.png" alt="날씨흐림" />
+				</div>
+				<div class="dateweek">
+					<div class="datecontent">
+						10/18<br />
+					</div>
+					<div class="number">
+						<span class="high">25</span>&deg;<br />
+						<span class="low">11</span>&deg;
+					</div>
+					<div class="datecontent02">
+						10/18<br />
+					</div>
+					<div class="number02">
+						<span class="high">25</span>&deg;<br />
+						<span class="low">11</span>&deg;
+					</div>
+				</div>
+			</div>
+			<div class="today">
+				<div class="temp">
+					<span class="c">28</span><span class="degspan">&deg;</span>
+				</div>
+				<div class="date">
+					화요일,&nbsp;10/17
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div>
+</body>
+
+</html>

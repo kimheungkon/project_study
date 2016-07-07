@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>12_remove_method</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrap { border:1px solid red; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				/*
+				remove()와 detach()와 메서드의 차이
+				remove()의 경우 엘리먼트를 삭제하면 바인딩된 이벤트나 저장된 데이터가 메모리에서 삭제 된다.
+				detach()의 경우 엘리먼트를 삭제하면 바인딩된 이벤트나 저장된 데이터가 남아 있어 
+				해당 엘리먼트를 변수에 담았다가 다시 붙이면 이벤트와 데이터가 남아 있는것을 불 수 있다. 
+				*/
+				var el = $('#list > li').eq(1).bind('click', function(){
+					alert('click');
+				})
+				
+				el.detach();
+				
+				$('body').append(el);
+				
+				//var el = $('#list > li').eq(1).remove();
+			});
+		</script>
+	</head>
+	
+	<body>
+		<span>3-1이 두개가 들어가 있네요. 표시된 부분을 지워주세요.</span>
+		<div id="wrapper">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3
+					<ul id="list">
+						<li>3-1</li>
+						<li>3-1 ( 이부분을 지워 주세요. )</li>
+						<li>3-2</li>
+						<li>3-3</li>
+						<li>3-4</li>
+						<li>3-5</li>
+					</ul>
+				</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

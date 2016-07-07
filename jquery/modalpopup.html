@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+    $(function(){
+       //장막이벤트내용
+       
+        
+        function popMaker(id){
+            
+            var contents = $('.'+id).html();
+            
+            var tag = "";
+            tag+='<div class="popup '+id+'">';
+            tag+='<button class="closebtn">닫기</button>';
+            tag+='<div class="content">';
+            tag+=contents;
+            tag+='</div>';
+            tag+='</div>';
+            
+            $('body').append(tag);
+            centerPosition($('.'+id));
+        }
+        
+       
+   function blindFn(){
+       var bl_Tag = "";
+       
+       bl_Tag += '<div class="blind">';
+       bl_Tag += '</div>';
+       
+       $('body').prepend(bl_Tag);
+       
+       //장막생성 스타일
+       $('.blind').css({
+           position:'absolute',
+           backgroundColor:'#000',
+           left:0,
+           right:0,
+           top:0,
+           bottom:0,
+           display:'none'
+       }).fadeTo(1000,0.5);
+   }
+   
+   function centerPosition(target){
+           target.css({
+               left:"50%",
+               marginLeft:function(){
+                   
+                   var aa = $(this).css('width');
+                   return -parseInt(aa)/2 + 'px';
+                   
+               },
+               top:"50%",
+               marginTop:function(){
+                   
+                   var aa = $(this).css('height');
+                   return -parseInt(aa)/2 + 'px';
+                   
+               }
+           })
+           
+       }
+       
+       //닫기
+        var closeEvent = function(){
+            //$('.blind').remove();
+            $('.popup').fadeOut(1000,function(){
+                $(this).remove()
+            })
+            $('.blind').fadeOut(1000,function(){
+                $(this).remove()
+            })
+        }
+       
+       var openPopUp = function(){
+           var id = $(this).attr('id');
+           blindFn(); // 막생성
+           popMaker(id); // 팝생성 //팝위치
+           $('.popup').show(1000); //보여주기
+        }
+        
+     
+       
+       //클릭이벤트 장막
+        $('.open').click(openPopUp);
+        
+        $('body').on('click','.closebtn',closeEvent);
+     });
+    </script>
+    <style>
+        .popup{
+            width:500px; height:500px; border:1px #F00 solid;
+            background-color: #fff;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+            display:none;
+        }
+        .pop1{width:600px; height:600px; display:none;}
+        .pop2{width:200px; height:200px; display:none;}
+        .pop3{width:300px; height:600px; display:none;}
+        .pop4{width:700px; height:600px; display:none;}
+        
+        .popup.pop1 .wrap{color:#F00;}
+        .popup.pop2 .wrap{color:#FF0;}
+        .popup.pop3 .wrap{color:#F0F;}
+        .popup.pop4 .wrap{color:#0F0;}
+    </style>
+    
+</head>
+<body>
+    
+    <button class="open" id="pop1">열어</button>
+    <button class="open" id="pop2">열어</button>
+    <button class="open" id="pop3">열어</button>
+    <button class="open" id="pop4">열어</button>
+    
+    <div class="pop1"> 
+        <div class="wrap">
+           AAAAA
+        <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop2"> 
+        <div class="wrap">
+            BBBB
+            <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop3"> 
+        <div class="wrap">
+            CCCC
+        <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop4"> 
+        <div class="wrap">
+            DDDD
+        <button>확인</button>
+         </div>  
+    </div>
+    
+    
+
+    
+</body>
+</html>

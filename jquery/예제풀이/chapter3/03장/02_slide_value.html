@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>02_slide_value</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<style>
+			#slider { width:300px;  margin:100px;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				var slider = $( "#slider" ).slider({
+					min:20,
+					max:200,
+					value:100,
+					slide:function( event, ui ){
+						$('#value').text(ui.value);
+					}
+				});
+				
+				$('#value').text(slider.slider('value'));
+			});
+		</script>
+	</head>
+	<body>
+		<div><span>value = </span><span id="value">0</span></div>
+		<div id="slider"></div>
+	</body>
+</html>

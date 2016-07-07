@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------------------------------------
+css reset
+
+* Version 	: 1.10
+* author	: jongcheol lee
+* email		: kio21@witplus.com
+* website	: 
+---------------------------------------------------------------------------------------------*/
+
+body,td,select,input,div,form,textarea,center,option,pre,blockquote,form,fieldset 
+															{font-family:'Nanum Gothic','돋움',dotum; font-size:12px;color:#333333;line-height:16px;border:0; padding:0px; margin:0px;}
+
+div, p, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, form	{margin:0; padding:0; list-style:none;}
+img, table													{border:0 none;}
+a															{border:0 none;}
+a,img,input,select											{word-wrap:expression( this.style.wordWrap="normal",this.hideFocus=true); vertical-align:middle;}
+
+button														{border:0 none; padding:0; margin:0; background:transparent; cursor:pointer; *overflow:visible; vertical-align:middle; di}
+button::-moz-focus-inner {
+    padding:0;
+    border:0;
+}/* 파이어폭스용 버튼 내부패딩없애기  */
+table, th, td												{padding:0; border-spacing:0px; border:0 none; border-collapse:collapse; }
+
+fieldset													{ border:0 none; padding:0; margin:0; }
+legend														{ overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+
+
+a:link					{ text-decoration: none; color:#898989; }
+a:visited				{ text-decoration: none; }
+a:hover					{ text-decoration: underline; }
+a:active				{ text-decoration: underline; outline:0; }
+a:focus					{ text-decoration: underline; outline:0; }
+
+
+/** COMMON **/
+html, body		{ width:100%;height:100%;}
+
+select			{border:1px solid #C4C4C4;height:22px;vertical-align:middle;}		
+textarea		{resize:none;}
+
+img				{border:0;}
+
+hr				{display: none; }
+caption			{display: none; }
+.hidden			{display: none; }
+
+.vHidden		{ visibility:hidden; }
+
+
+/* height */
+.h22			{height:22px;}
+.h25			{height:25px;}
+.h30			{height:30px;}
+.h200			{height:200px;}
+
+/* width */
+.w100			{width:100%;}
+.w98			{width:98%;}
+
+/* letter-spacing */
+.ls01			{letter-spacing: -0.1em;}
+.ls02			{letter-spacing: -0.2em;}
+
+
+/** COLOR **/
+.bold			{font-weight:bold;}
+.gray					{color:#898989; }
+.blue					{color:#0A01CE;}
+.red					{color:#a72120;}
+.green					{color:#297902;}
+.orange					{color:#ff9c00;}
+.blueb					{color:#0A01CE;font-weight:bold;}
+.redb					{color:#FD3001;font-weight:bold;}
+.greenb					{color:#0A01CE;font-weight:bold;}
+
+
+/* float, text-align */
+.cBoth			{clear: both;}
+.fLeft			{float: left;}
+.fRight			{float: right;}
+.tLeft			{text-align: left;}
+.tCenter		{text-align: center;}
+.tRight			{text-align: right;}
+
+
+/* font-size */
+.f11			{font-size: 11px;}
+.f12			{font-size: 12px;}
+.f13			{font-size: 13px;}
+.f14			{font-size: 14px;}
+.f15			{font-size: 15px;}
+.f25			{font-size: 25px;}
+
+/* line-height */
+.lh17			{line-height: 17px;}
+.lh25			{line-height: 25px;}
+
+
+/* padding */
+.pT2	{padding-top: 2px;}
+.pT3	{padding-top: 3px;}
+.pT4	{padding-top: 4px;}
+.pT5	{padding-top: 5px;}
+.pT10	{padding-top: 10px;}
+.pT20	{padding-top: 20px;}
+.pT30	{padding-top: 30px;}
+.pT40	{padding-top: 40px;}
+.pT50	{padding-top: 50px;}
+
+.pR5	{padding-right: 5px;}
+.pR10	{padding-right: 10px;}
+.pR20	{padding-right: 20px;}
+
+.pB5	{padding-bottom: 5px;}
+.pB10	{padding-bottom: 10px;}
+.pB20	{padding-bottom: 20px;}
+.pB30	{padding-bottom: 30px;}
+.pB40	{padding-bottom: 40px;}
+.pB50	{padding-bottom: 50px;}
+
+.pL5	{padding-left: 5px;}
+.pL10	{padding-left: 10px;}
+.pL20	{padding-left: 20px;}
+.pL25	{padding-left: 25px;}
+.pL30	{padding-left: 30px;}
+.pL40	{padding-left: 40px;}
+.pL50	{padding-left: 50px;}
+.pL245	{padding-left: 245px;}

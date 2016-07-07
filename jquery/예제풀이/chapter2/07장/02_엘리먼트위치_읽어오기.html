@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>03_엘리먼트위치_읽어오기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<style>
+			* { margin:0; padding:0; }
+			#wrapper { position: absolute; width:500px; height:500px; border:3px solid blue; left:100px; top:150px; }
+			#box { position:absolute; width:100px; height:100px; left:50px; top:50px; background:red; color:white;}
+		</style>
+		<script>
+		$(document).ready(function(){
+			var box = $('#box');
+			var positionInfo = $('#position_info');
+			
+			box.draggable({
+				drag:function(){
+					positionInfo.find('.ol').text(box.offset().left);
+					positionInfo.find('.ot').text(box.offset().top);
+					positionInfo.find('.pl').text(box.position().left);
+					positionInfo.find('.pt').text(box.position().top);
+				}
+			});
+		});
+		</script>
+	</head>
+	
+	<body>
+		<div id="position_info">
+			<span>offset().left = </span><span class="ol">0</span><br>
+			<span>offset().top = </span><span class="ot">0</span><br>
+			<span>position().left = </span><span class="pl">0</span><br>
+			<span>position().top = </span><span class="pt">0</span><br><br>
+			<span>box를 드래그 해보세요.</span>
+		</div>
+		<div id="wrapper">
+			<div id="box"><span>box</span></div>
+		</div>
+	</body>
+</html>

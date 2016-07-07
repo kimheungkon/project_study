@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>02_constrain_movement</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<style>
+			#draggable { width: 150px; height: 150px; padding: 0.5em; border: 1px solid red; }
+			#draggable2 { width: 150px; height: 150px; top:200px; padding: 0.5em; border: 1px solid red; position:absolute; }
+			#draggable3 { width: 150px; height: 150px; padding: 0.5em; border: 1px solid red; }
+			#containment { width:950px; height:300px; margin:200px; padding:20px; border: 1px solid green; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="draggable">
+		  <p>Drag me around x</p>
+		</div>
+		<div id="draggable2">
+		  <p>Drag me around y</p>
+		</div>
+		<div id="containment">
+			<div id="draggable3">
+			  <p>Drag me around containment</p>
+			</div>
+		</div>
+	</body>
+</html>

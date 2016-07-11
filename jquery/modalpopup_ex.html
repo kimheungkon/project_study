@@ -9,35 +9,37 @@
     $(function(){
        //장막이벤트내용
        
-        // 2번
+        
         function popMaker(id){
             
-            // 4번
             var contents = $('.'+id).html();
+                
+               
+            
             
             var tag = "";
             tag+='<div class="popup '+id+'">';
             tag+='<button class="closebtn">닫기</button>';
             tag+='<div class="content">';
-            tag+=contents;
+           
             tag+='</div>';
             tag+='</div>';
             
             $('body').append(tag);
+            $
+            $('body').children('.popup').children('contents').append('text.html pop1')
+            
             centerPosition($('.'+id));
         }
         
-    // 1번
+       
    function blindFn(){
        var bl_Tag = "";
        
        bl_Tag += '<div class="blind">';
        bl_Tag += '</div>';
        
-       
        $('body').prepend(bl_Tag);
-
-
        
        //장막생성 스타일
        $('.blind').css({
@@ -50,12 +52,12 @@
            display:'none'
        }).fadeTo(1000,0.5);
    }
-   // 3번
+   
    function centerPosition(target){
            target.css({
                left:"50%",
                marginLeft:function(){
-                  
+                   
                    var aa = $(this).css('width');
                    return -parseInt(aa)/2 + 'px';
                    
@@ -71,7 +73,7 @@
            
        }
        
-       //닫기 원하는때
+       //닫기
         var closeEvent = function(){
             //$('.blind').remove();
             $('.popup').fadeOut(1000,function(){
@@ -126,30 +128,6 @@
     <button class="open" id="pop3">열어</button>
     <button class="open" id="pop4">열어</button>
     
-    <div class="pop1"> 
-        <div class="wrap">
-           AAAAA
-        <button>확인</button>
-         </div>  
-    </div>
-    <div class="pop2"> 
-        <div class="wrap">
-            BBBB
-            <button>확인</button>
-         </div>  
-    </div>
-    <div class="pop3"> 
-        <div class="wrap">
-            CCCC
-        <button>확인</button>
-         </div>  
-    </div>
-    <div class="pop4"> 
-        <div class="wrap">
-            DDDD
-        <button>확인</button>
-         </div>  
-    </div>
     
     
 

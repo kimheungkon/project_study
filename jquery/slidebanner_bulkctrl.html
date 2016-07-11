@@ -26,6 +26,8 @@ ul{list-style:none}
             idxarr.push(0);
             console.log(idxarr)
         })
+        
+        var selectorIdx;
          
          //$('body .slide').eq(target) : 모든 슬라이드에서 내가 원하는(target)을 선택한뒤에 
          //.find('li') : li들을 찾고 on클래스를 없애고,
@@ -41,10 +43,10 @@ ul{list-style:none}
                  left:end
             })
              
-            if(idx == $('.slide').eq(selectorIdx).find('li').length){
-                idxarr[selectorIdx] = 0
+            if(idxarr[selectorIdx] == $('.slide').eq(selectorIdx).find('li').length){
+                idxarr[selectorIdx] = 0;
                 movement('100%','0',idxarr[selectorIdx],selectorIdx)
-            }else if(idx < 0){
+            }else if(idxarr[selectorIdx] < 0){
                 idxarr[selectorIdx] = $('.slide:eq('+selectorIdx+') li').length -1;
                 movement('-100%','0',idxarr[selectorIdx],selectorIdx)
             }
@@ -53,13 +55,9 @@ ul{list-style:none}
          
          
         $('.slide .next').click(function(){
-             
             selectorIdx = $(this).parent().index();
-            
             movement('0','-100%',idxarr[selectorIdx],selectorIdx);
-            
             idxarr[selectorIdx]++;
-            
             movement('100%','0',idxarr[selectorIdx],selectorIdx);
             console.log(idxarr)
             console.log(selectorIdx)
@@ -73,25 +71,27 @@ ul{list-style:none}
             idxarr[selectorIdx]--;
             movement('-100%','0',idxarr[selectorIdx],selectorIdx);            
         })
+
      
 
-        // $('.slide .li a').click(function(){
-        //     var tar = $(this).parent('.slide').index();
-        //     idxarr[tar] = $(this).parent().index();
-        //     var his = $(this).parent().filter('.on').index();
+        $('.slide li a').click(function(){
+            selectorIdx = $(this).parents('.slide').index();
+            idxarr[selectorIdx] = $(this).parent().index();
+            var his = $('.slide:eq('+selectorIdx+') li.on').index();
             
-        //     if(his < idxarr[tar]){
-        //         movement('100%','0', idxarr[tar],tar)
-        //     }
-        //     console.log(tar)
-        //     console.log(idxarr[tar])
-        //     console.log(his)
+            if(his<idxarr[selectorIdx]){
+            movement('0','-100%',his,selectorIdx)
+            movement('100%','0',idxarr[selectorIdx],selectorIdx)
+            }else if(his>idxarr[selectorIdx]){
+            movement('0','100%',his,selectorIdx)
+            movement('-100%','0',idxarr[selectorIdx],selectorIdx)
+            }
             
             
             
-        //     return false
+            return false
             
-        // })
+        })
 
 
 

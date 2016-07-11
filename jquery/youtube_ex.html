@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        ul{margin:0; padding:0; list-style:none;}
+        .view{margin: 0 auto; width:660px; }
+        .list {text-align:center;}
+        .list li{width:150px; display:inline-block;}
+        .list li img{width:100%;height:100%;}
+    </style>
+    <script>
+        $(function(){
+            
+            $('.list li a').click(function(){
+                var url= $(this).attr('href');
+                var location = 'https://www.youtube.com/embed/'+url
+                
+                $('.view iframe').attr('src',location);
+                console.log(location)
+                return false;
+            });
+        })
+
+        
+        
+    </script>
+    
+</head>
+<body>
+
+    <div class="view">
+        <iframe width="660" height="385" src="https://www.youtube.com/embed/JSXq8RAA4YY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <ul class="list">
+        <li><a href="JSXq8RAA4YY"><img src="../images/Untitled-1.png" alt=""></a></li>
+        <li><a href="yWYHHNADK04"><img src="../images/Untitled-2.png" alt=""></a></li>
+        <li><a href="c7rCyll5AeY"><img src="../images/Untitled-3.png" alt=""></a></li>
+        <li><a href="bBnzrY3xj5Y"><img src="../images/Untitled-4.png" alt=""></a></li>
+        <li><a href="kOkQ4T5WO9E"><img src="../images/Untitled-5.png" alt=""></a></li>
+    </ul>
+    
+
+    
+</body>
+</html>

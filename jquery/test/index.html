@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery test</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Description" content="uxui반응형웹반 jQuery 실습문제" />
+	<meta name="Author" content="작성자 이름" />
+	<link rel="stylesheet" href="css/common.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+
+<header>
+	<div>
+		<h1>jQuery Test</h1>
+		<nav>
+			<ul>
+				<li><a href="">Description</a></li>
+				<li><a href="">A. Hover Menu</a></li>
+				<li><a href="">B. ScrollMove Menu</a></li>
+				<li><a href="">C. Slide Banner</a></li>
+				<li><a href="">D. Fade Banner</a></li>
+				<li><a href="">E. SNS Move List Gellay</a></li>
+				<li><a href="">F. Wing banner</a></li>
+				<li><a href="">G. Layout Popup</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="content">
+	<section class="a-type">
+		<div>
+		<h2>Description</h2>
+		<ol>
+			<li>요구사항 1개 구현시 5점</li>
+			<li>각지문의 호출함수를제작하여 기능 재활용시 가산점 5점~15점</li>
+			<li>요구사항의 전체 미구현시 감점 10점 </li>
+			<li>버그발생시 감점1점(버그의 기준 : 요구사항에 의도되지 않은 기능 또는 오작동)</li>
+			<li>본인의 작업 편이상 클래스는 추가하셔도 됩니다.</li>
+			<li>지문의 내용이 이해불가시 질문 바랍니다. (오타가 많음.)</li>
+		</ol>
+		<p style="font-size:50px">총점 200점 만점 </p>
+		</div>
+	</section>
+	<section class="b-type">
+		<div>
+		<h2>Hover Menu</h2>
+		<ol>
+			<li>왼쪽매뉴에 마우스가 오버 되면 바탕색과 글씨색이 변하도록 하시오</li>
+			<li>왼쪽매뉴에 마우스가 아웃 되면 원래색으로 돌아오게 하시오.</li>
+		</ol>
+		</div>
+	</section>
+	<section class="c-type">
+		<div>
+		<h2>ScrollMove Menu</h2>
+		<ol>
+			<li>매뉴를 클릭 하면 해당컨텐츠에 맞는 세션으로 스크롤이 이동되게하시오</li>
+			<li>해당컨텐츠로 이동될때 에니메이션으로 바로 이동되게 만드십시오.</li>
+		</ol>
+
+		</div>
+	</section>
+	<section class="d-type">
+		<div>
+			<h2>Slide Banner</h2>
+			<ol>
+				<li>다음버튼클릭시 오른쪽에서 왼쪽으로 이미지가 나오게하시오</li>
+				<li>만약에 다음 버튼 클릭시 다음이미지가 없으면 처음 이미지가 오른쪽에서 왼쪽으로 나오게 하십시오.</li>
+				<li>이전버튼클릭시 왼쪽에서 오른쪽으로 이미지가 나오게하시오</li>
+				<li>만약에 이전 버튼 클릭시 이전 이미지가 없으면 마지막이미지가 왼쪽에서 오른쪽으로 나오게 하십시오.</li>
+				<li>이미지가 자동으로 왼쪽에서 오른쪽으로 4.5초에한번씩 작동하게 하시오</li>
+				<li>베너에 마우스를 올리면 자동으로 작동하는 기능이 멈추도록 하시오</li>
+				<li>베너에 마우스를 나가면 자동으로 작동하는 기능이 현재 보여지고 있는 이미지 다음으로 동작하도록 하시오</li>
+				<li>번호를 클릭하면 해당 번호의 이미지가 나오게 나오게하시오</li>
+				<li>번호를 눌러 이미지가 나오게할때. 현재 누른번호가 이전번호 보다 크면 이전이미지나는 왼쪽으로 이동 나올이미지는 오른쪽에서 왼쪽으로하시오 마냑에 현재 누른 번호가 이전번호보다 작으면 현재보이는 이미지는 오른쪽으로 이동, 나올이미지는 왼쪽에서 오른쪽으로 이동하여 이미지를 보여주시오</li>
+				<li>시작이미지가 랜덤으로 나오게 하시오.</li>
+				<li>자동순환시 번호에 하이라이트가 이미지와 동일한순서대로 이동되게하시오</li>
+				<li>클릭시 번호에 하이라트가 이동되게하시오</li>
+				<li>다음/이전버튼클릭시 번호에 하이라이트가 이동되게하시오</li>
+			</ol>
+			<div class="slidebanner">
+
+				<ul>
+					<li>
+						<a href="javascript:void(0)">1</a>
+						<img src="images/1.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+						<img src="images/2.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+						<img src="images/3.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+						<img src="images/4.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+						<img src="images/5.jpg" alt="">
+					</li>
+				</ul>
+
+				<button class="next">다음</button>
+				<button class="prev">이전</button>
+
+			</div>
+		</div>
+	</section>
+	<section class="e-type">
+		<div>
+		<h2>Fade Banner</h2>
+		<ol>
+			<li>4.8초에한번씩 이미지가 fadeIn/Out 로 다음이미지가 나오게하시오</li>
+			<li>마우스가해당 베너로 올라가면, 4.8초에 한번씩작동하는 기능은 정지 하시오</li>
+			<li>마우스가해당 베너로 나가면, 4.8초에 한번씩작동하는 기능을 시작 하시오</li>
+			<li>해당번호를 누르면 현재보이는 이미지는 fadeOut 나올이미지는 fadeIn</li>
+			<li>해당번호에 맞게 번호가 이동되게하시오</li>
+		</ol>
+		<div class="fadebanner">
+
+				<ul>
+					<li>
+						<a href="javascript:void(0)">1</a>
+						<img src="images/1.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">2</a>
+						<img src="images/2.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">3</a>
+						<img src="images/3.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">4</a>
+						<img src="images/4.jpg" alt="">
+					</li>
+					<li>
+						<a href="javascript:void(0)">5</a>
+						<img src="images/5.jpg" alt="">
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</section>
+	<section class="f-type">
+		<div>
+			<h2>SNS Move List Gellay</h2>
+			<ol>
+				<li>youtube에서 동영상을 iframe 으로 가져오시오</li>
+				<li>이미지 그리드클릭시 영상이보이는 iframe의 영상이 바뀌도록하시오</li>
+				<li>리스트의 이미지 클릭시 반투명 0.5 로 설정하시오</li>
+			</ol>
+
+			<div class="movie-view">
+
+				<div class="view">
+					<iframe width="800" height="442" src="https://www.youtube.com/embed/Uv554B7YHk4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+
+				<ul>
+					<li><a href="Uv554B7YHk4"><img src="images/5.png" alt=""></a></li>
+					<li><a href="4z4sN05-xIs"><img src="images/4.png" alt=""></a></li>
+					<li><a href="1ELGunbuvqc"><img src="images/3.png" alt=""></a></li>
+					<li><a href="uBezVQweeUE"><img src="images/2.png" alt=""></a></li>
+					<li><a href="q6f-LLM1H6U"><img src="images/1.png" alt=""></a></li>
+				</ul>
+
+			</div>
+		</div>
+	</section>
+	<section class="g-type">
+		<div>
+		<h2>Wing banner</h2>
+		<ol>
+			<li>창이 리사이즈 되더라도 wing 엘리먼트가 재위치를 찾도록하시오.</li>
+			<li>wing 클래스를 가진 엘리먼트가 스크롤위치를 에니메이션으로 자연스럽게 따라다니게하시오</li>
+		</ol>
+		</div>
+	</section>
+	<section class="h-type">
+		<div>
+			<h2>Layout Popup</h2>
+			<ol>
+				<li>아래 버튼을 클릭시 아래번튼에 클릭하는 내용이 팝업으로 나오게하시오</li>
+				<li>팝업으로 나올때, 뒷배경이 검은색 반투명으로 fadeTo기능을 써 나오도록하시오 css 는 추가하셔야 합니다.</li>
+				<li>팝업내용이 나올때 위에서 아래로 애니메이션 을이용하여 나오도록하시오.</li>
+				<li>클로즈 버튼클릭시 검은반투명배경이 사라지게 하시오</li>
+				<li>클로즈 버튼클릭시 팝업이 사라지게  하시오</li>
+			</ol>
+
+			<div class="btngroup">
+
+					<button class="eventBt01">이벤트1</button>
+					<div class="event1 pop">
+						<h2>이벤트1</h2>
+						<img src="" alt="">
+					</div>
+					<button class="eventBt02">이벤트2</button>
+					<div class="event2 pop">
+						<h2>이벤트2</h2>
+						<img src="" alt="">
+					</div>
+					<button class="eventBt03">이벤트3</button>
+					<div class="event3 pop">
+						<h2>이벤트3</h2>
+						<img src="" alt="">
+					</div>
+					<button class="eventBt04">이벤트4</button>
+					<div class="event4 pop">
+						<h2>이벤트4</h2>
+						<img src="" alt="">
+					</div>
+
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="wing">
+	<img src="images/suzi_nav.gif" alt="">
+</div>
+
+
+</body>
+</html>

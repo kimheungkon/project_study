@@ -21,19 +21,45 @@
                 var minutes = time.getMinutes();
                 var seconds = time.getSeconds();
                 
+                if(hours >= 7 && hours <= 17){
+                    $('body').css({
+                        backgroundColor:'#0082a7'
+                    })
+                }else{
+                    $('body').css({
+                        backgroundColor:'gray'
+                    })                    
+                }
+                
+                
+                
                 hours = arrPush(hours,hoursArr);
                 minutes = arrPush(minutes,minutesArr);
                 seconds =arrPush(seconds,secondsArr);
                 
                 timeprint(hours,$('.hours'))
+                timeprint(minutes,$('.minutes'))
+                timeprint(seconds,$('.seconds'))                
                 
                 //var timePrint = hours%12 +":"+ minutes+":"+ seconds
                 //$('.time').text(timePrint);
             },1000);
+
+
+
             
             function timeprint(time,target){
+
                 target.children('span').each(function(i,e){
-                    $(e).text(time[i])
+
+                    var num = -1*(Number(time[i]*100)) + 'px';
+                    
+                    // $(e).css({
+                    //     'background-Position':'0 '+num
+                    // })
+                    $(e).animate({
+                        'background-Position-Y':num
+                    })
                 })
             }
             
@@ -60,6 +86,19 @@
         
         
     </script>
+    
+    <style>
+        body{background:black; color:#fff;}
+        body div div{display:inline-block;}
+        body span{display:inline-block; border:1px #f00 solid;
+            text-indent:-9999px;
+            width:42px; height:60px;
+            background-image:url(../images/txt-num.png);
+            background-repeat:no-repeat;
+        }
+                
+    </style>
+    
 </head>
 <body>
     <div class="time" style="font-size:30px;">

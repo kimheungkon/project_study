@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+        $(function(){
+
+            var target = $('.list ul li')
+            var viewThumb = 5;            
+            idx = 0;
+            
+            $('.list ul').css({
+                width:function(){
+                    var target = $('.list ul li');
+                    return target.width() * target.size();
+                }
+            })
+            
+
+            $('.next').click(function(){
+                
+                var aa = target.width() * viewThumb;
+                var count = target.length / 5
+
+                idx ++
+                
+                
+                if(idx >= count){
+                    idx = count - 1
+                    return
+                }else{
+                     $('.list ul').animate({
+                     right:'+='+aa+'px'
+                    })
+                }
+            })
+            
+            
+            $('.prev').click(function(){
+                
+                var aa = target.width() * viewThumb;
+                var count = 0;
+
+                idx --
+                
+                if(idx < count){
+                    idx = 0
+                    return
+                }else{
+                     $('.list ul').animate({
+                     right:'-='+aa+'px'
+                    })
+                }
+            })
+            
+
+            $(function(){
+                
+                $('.list li a').click(function(){
+                    var url = $(this).children('img').attr('src');
+          
+                    $('.view img').attr('src',url);
+                    return false;
+                });
+            })          
+
+
+
+        })
+        
+        
+    </script>
+    
+    <style>
+        *{margin:0; padding:0;}
+        .view{width:500px; position:relative; margin:0 auto; }
+        .view img{width:500px; height:300px;}
+        .slide{width:500px; position:relative; margin:0 auto; }
+        .slide .button{width:100%; position:absolute; top:50%; margin-top:-15px; z-index:1;}
+        .slide .button .next{position:absolute; right:-50px;}
+        .slide .button .prev{position:absolute; left:-50px;}        
+        .slide .list{width:500px; position:relative; overflow:hidden;}
+        .slide .list ul{list-style:none; height:100px; position:relative; solid; width:500px;}
+        .slide .list ul li{width:100px; height:100px; float:left;}
+        .slide .list ul li img{width:100px; height:100px; float:left;}        
+
+        
+        
+    </style>
+    
+    
+</head>
+<body>
+
+
+    <div class="view">
+        <img src="../images/slidescrl/farm-girl.jpg" alt="" />
+    </div>
+
+
+    <div class="slide">
+        
+        <div class="button">
+            <button class="next">다음</button>
+            <button class="prev">이전</button>
+        </div>        
+        <div class="list">
+            <ul>
+                <li><a href=""><img src="../images/slidescrl/farm-girl.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/bee.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/cat.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/chicken.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/deer.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/duck.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/goat.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/grasshopper.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/horse.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/ladybug.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/leopard.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/monkey.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/mouse.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/potatoes.jpg" alt="" /></a></li>
+                <li><a href=""><img src="../images/slidescrl/squirrel.jpg" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

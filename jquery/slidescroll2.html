@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+        
+        $(function(){
+            
+            
+            $('.slider ul ').css({
+                width:function(){
+                    var target=$('.slider ul li');
+                    return target.width()*target.size();
+                }
+            })
+            
+            idx = 0;
+            $('.slider .next').click(function(){
+                var target=$('.slider ul li');
+                var viewThumb = 5 ;
+                var aa = target.width() * viewThumb
+                count = target.length / 5
+                
+                idx++
+                console.log(idx)
+                if(idx >= count){
+                    idx = count -1
+                    console.log(idx)
+                    return
+                }else{
+                    $('.slider ul').animate({
+                        right:'+='+aa+'px'
+                    })
+                }
+                
+            })
+            
+            $('.prev').click(function(){
+                
+                var target=$('.slider ul li')
+                var viewThumb = 5 ;
+                var aa = target.width() * viewThumb
+                
+                count = target.length /5
+                
+                idx--
+                console.log(idx +' 빼기')
+                if(idx < 0){
+                    idx = 0
+                    console.log(idx +' 빼기')
+                    return
+                }else{
+                    $('.slider ul').animate({
+                        right:'-='+ aa+'px'
+                    })
+                }
+            })
+            
+            $('.slider ul li a').click(function(){
+                var url = $(this).attr('href')
+                console.log(url)
+                $('.view img').attr('src',url)
+                console.log($('.view').attr('src',url))
+                return false
+            })
+            
+        })
+
+
+    </script>
+
+    <style>
+    *{margin:0;padding:0;}
+        .slider { width:500px; height:auto; margin:0 auto;  position:relative;}
+        .slider .button { width:100%; position:absolute; top:50%; margin-top:-10px; z-index:1;}
+        .slider .button .prev {position:absolute; left:-50px;}
+        .slider .button .next {position:absolute; right:-50px;}
+        .slider .view { width:500px; height:300px; overflow:hidden;}
+        .view img { width:100%; }
+        .slider .imgslider { width:500px; height:100px; overflow:hidden;}
+        .slider ul{ display:block; list-style:none; position:relative;}
+        .slider li{ width:100px; height:auto; float:left; overflow:hidden;}
+        .slider li img{ width:180%; height:auto; margin-left:-45px; float:left; overflow:hidden;}
+        .slider li:first-child img{ margin-left:-10px;}
+        
+
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div class="slider">
+        
+        <div class="button">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div>
+        
+        <div class="view">
+            <img src="../images/slidescrl/farm-girl.jpg" alt="">
+        </div>
+        
+        <div class="imgslider">
+            <ul>
+                <li>
+                    <a href="../images/slidescrl/farm-girl.jpg">
+                        <img src="../images/slidescrl/farm-girl_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                     <a href="../images/slidescrl/bee.jpg">
+                        <img src="../images/slidescrl/bee_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                     <a href="../images/slidescrl/cat.jpg">
+                        <img src="../images/slidescrl/cat_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                     <a href="../images/slidescrl/chicken.jpg">
+                        <img src="../images/slidescrl/chicken_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                     <a href="../images/slidescrl/deer.jpg">
+                        <img src="../images/slidescrl/deer_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                     <a href="../images/slidescrl/duck.jpg">
+                        <img src="../images/slidescrl/duck_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/goat.jpg">
+                        <img src="../images/slidescrl/goat_s.jpg"alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/grasshopper.jpg">
+                        <img src="../images/slidescrl/grasshopper_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/horse.jpg">
+                        <img src="../images/slidescrl/horse_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/ladybug.jpg">
+                        <img src="../images/slidescrl/ladybug_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/leopard.jpg">
+                        <img src="../images/slidescrl/leopard_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/monkey.jpg">
+                        <img src="../images/slidescrl/monkey_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/mouse.jpg">
+                        <img src="../images/slidescrl/mouse_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/potatoes.jpg.jpg">
+                        <img src="../images/slidescrl/potatoes_s.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="../images/slidescrl/squirrel.jpg">
+                        <img src="../images/slidescrl/squirrel_s.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

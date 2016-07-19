@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        
+        $(function(){
+            
+            $.getJSON('class.json',function(data){
+            //$('data').children('team1').text()
+            
+            
+            var table_element = ""
+            table_element += "<table>"
+            
+            $.each(data.team1,function(i,e){
+                
+                table_element += "<tr>"
+                
+                $.each(e,function(j,f){
+                    table_element += "<td>"
+                    table_element += f
+                    table_element += "</td>"
+                })
+                
+                table_element += "</tr>"  
+            })
+            
+            table_element += "</table>"
+            $('.table').html(table_element)
+                
+            })  
+            
+            
+        })
+       
+        
+    </script>
+    <style>
+        .table table{border:1px #F00 solid; width: 100%;}
+        .table tr,
+        .table td{border:1px #F00 solid;}
+        
+    </style>
+    
+</head>
+<body>
+    
+    <div class="table"></div>
+    
+    
+</body>
+</html>

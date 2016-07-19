@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>03_스크롤위치_읽고설정하기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			.wrapper{position:relative;width:1000px; height:3000px; border:1px #F00 solid;}
+			.fly{position:absolute; top:0;width:100px; height:300px; border:1px #F00 solid;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+				// 
+				$('.wrapper').css({
+					left:'50%', //
+					marginLeft: -$('.wrapper').width()/2 //
+				});
+				// 
+				
+				$(window).resize(function(){
+					spot()
+				})
+				
+				$(window).trigger('resize')
+				
+				function spot(){
+					var offset = $('.wrapper').offset().left 
+					wrapwidth = $('.wrapper').width()
+					$('.fly').css({
+						left:offset+wrapwidth+20
+					})	
+				}
+				
+				$(window).scroll(function(){
+					
+					var sct = $(this).scrollTop()
+						$('.fly').stop().css({
+							top:sct
+					})
+				})
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+	<div class="wrapper"></div>
+	<div class="fly"></div>
+	
+	
+	
+	
+	</body>
+</html>

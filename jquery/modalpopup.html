@@ -27,51 +27,50 @@
             centerPosition($('.'+id));
         }
         
-    // 1번
-   function blindFn(){
-       var bl_Tag = "";
-       
-       bl_Tag += '<div class="blind">';
-       bl_Tag += '</div>';
-       
-       
-       $('body').prepend(bl_Tag);
-
-
-       
-       //장막생성 스타일
-       $('.blind').css({
-           position:'absolute',
-           backgroundColor:'#000',
-           left:0,
-           right:0,
-           top:0,
-           bottom:0,
-           display:'none'
-       }).fadeTo(1000,0.5);
-   }
-   // 3번
-   function centerPosition(target){
-           target.css({
-               left:"50%",
-               marginLeft:function(){
-                  
-                   var aa = $(this).css('width');
-                   return -parseInt(aa)/2 + 'px';
-                   
-               },
-               top:"50%",
-               marginTop:function(){
-                   
-                   var aa = $(this).css('height');
-                   return -parseInt(aa)/2 + 'px';
-                   
-               }
-           })
+        // 1번
+        function blindFn(){
+           var bl_Tag = "";
            
-       }
+           bl_Tag += '<div class="blind">';
+           bl_Tag += '</div>';
+           
+           
+           $('body').prepend(bl_Tag);
+    
+    
+           
+           //장막생성 스타일
+           $('.blind').css({
+               position:'absolute',
+               backgroundColor:'#000',
+               left:0,
+               right:0,
+               top:0,
+               bottom:0,
+               display:'none'
+           }).fadeTo(1000,0.5);
+        }
+        // 3번
+        function centerPosition(target){
+               target.css({
+                   left:"50%",
+                   marginLeft:function(){
+                      
+                       var aa = $(this).css('width');
+                       return -parseInt(aa)/2 + 'px';
+                       
+                   },
+                   top:"50%",
+                   marginTop:function(){
+                       
+                       var aa = $(this).css('height');
+                       return -parseInt(aa)/2 + 'px';
+                       
+                   }
+               })
+        }
        
-       //닫기 원하는때
+        //닫기 원하는때
         var closeEvent = function(){
             //$('.blind').remove();
             $('.popup').fadeOut(1000,function(){
@@ -82,21 +81,21 @@
             })
         }
        
-       var openPopUp = function(){
+        var openPopUp = function(){
            var id = $(this).attr('id');
            blindFn(); // 막생성
            popMaker(id); // 팝생성 //팝위치
            $('.popup').show(1000); //보여주기
         }
         
-     
-       
-       //클릭이벤트 장막
+        //클릭이벤트 장막
         $('.open').click(openPopUp);
-        
         $('body').on('click','.closebtn',closeEvent);
-     });
+    });
+
     </script>
+    
+    
     <style>
         .popup{
             width:500px; height:500px; border:1px #F00 solid;

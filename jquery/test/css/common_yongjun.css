@@ -3,7 +3,7 @@
 html,body{height:100%}
 body{font-family: 'Nanum Gothic', sans-serif;}
 header{height:100%; background:#CCC;width:250px; position:fixed}
-header h1{font-size:26px; margin-bottom:50px;margin:20px; text-align:center;}
+header h1{font-size:26px; margin-bottom:50px; margin:20px; text-align:center;}
 header nav ul{list-style-position: inside; list-style: none;}
 header nav li{line-height:150%; border-top:1px #EEE solid; padding:10px 20px; }
 header nav li:first-child{border-top:none;}
@@ -31,7 +31,7 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .fadebanner li{display: inline-block;}
 .fadebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
 .fadebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
-.fadebanner li:first-child a{background:#E8B482}
+.fadebanner li.on a{background:#E8B482}
 .fadebanner li:first-child img{display: block}
 
 .movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;}

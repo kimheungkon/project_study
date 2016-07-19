@@ -1,0 +1,31 @@
+{
+    "team1":[{
+        "userName":"장선경",
+        "pcNum":"01",
+        "class":"스마트 웹 컨텐츠",
+        "address":"서울"
+    },{
+        "userName":"이고은",
+        "pcNum":"02",
+        "class":"스마트 웹 컨텐츠",
+        "address":"서울"
+    },{
+        "userName":"이혜인",
+        "pcNum":"03",
+        "class":"스마트 웹 컨텐츠",
+        "address":"서울"
+    }],
+    "team2":[{
+        "userName":"장미래",
+        "pcNum":"04",
+        "class":"스마트 웹 컨텐츠"
+    },{
+        "userName":"박하연",
+        "pcNum":"05",
+        "class":"스마트 웹 컨텐츠"
+    },{
+        "userName":"최희지",
+        "pcNum":"06",
+        "class":"스마트 웹 컨텐츠"
+    }]
+}

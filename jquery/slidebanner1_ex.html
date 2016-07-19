@@ -62,6 +62,7 @@ ul{list-style:none}
             
             if(idx < 0){
                 idx = $('.slide li').length -1
+         //idx = 상수 4로 하지 않는 이유는 li 갯수가 늘어나게되면 유지보수가 힘들어진다
                 $('.slide li').eq(idx).children('img').css({
                     'left':-slideWidth,
                     'display':'block'
@@ -87,7 +88,7 @@ ul{list-style:none}
                     left:-slideWidth
                 })
             }else if(idx < his){
-                $('.slide li').eq(idx).addClass('on').children('img').css({
+                $('.slide li').eq(idx).addClass('on').childrena('img').css({
                     left: -slideWidth,
                     'display':'block'
                 }).animate({

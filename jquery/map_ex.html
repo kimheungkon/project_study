@@ -12,15 +12,15 @@
     <div id="map"></div>
    
     
-    <button onclick="map(37.6394480, 127.0295924,'우리집')">우리집</button>
-    <button onclick="map(37.5718517, 156.9873219)">화장실</button>
-    <button onclick="map(47.5718517, 155.9873219)">정문</button>
-    <button onclick="map(37.5836900,126.9706280, '개집')">우리 개집</button>
+    <!--<button onclick="map(37.6394480, 127.0295924,'김흥곤')">우리집</button>-->
+    <!--<button onclick="map(37.5718517, 156.9873219)">화장실</button>-->
+    <!--<button onclick="map(47.5718517, 155.9873219)">정문</button>-->
+    <!--<button onclick="map(37.5836900,126.9706280, '개집')">우리 개집</button>-->
     <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=824cf99034463b50b1a587717adc13be"></script>
     <script type="text/javascript">
         
         
-        map(37.6394480, 127.0295924,"우리집");
+        map(37.6394480, 127.0295924,"김흥곤");
         
         function map(x,y,message){
             // $('#map *').remove();
@@ -49,7 +49,7 @@
             // marker.setMap(null);   
             
             
-            var iwContent = '<div style="padding:5px;">'+message+' <br><a href="http://map.daum.net/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰개집찾기</a> <a href="http://map.daum.net/link/to/여기가개집!,33.450701,126.570667" style="color:blue" target="_blank">큰개찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            var iwContent = '<div style="padding:5px;">'+message+' <br><a href="http://map.daum.net/link/map/서울특별시 강북구 한천로 124나길 72 3층,37.6394480,127.0295924" style="color:blue" target="_blank">주소</a> <a href="myphonenumber.html" style="color:blue" target="_blank">연락처</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
             iwPosition = new daum.maps.LatLng(x, y); //인포윈도우 표시 위치입니다
         
             // 인포윈도우를 생성합니다
